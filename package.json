@@ -1,0 +1,16 @@
+{
+  "name": "ssgpt6-core",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SSGPT6 Core - Intelligent Digital Access Platform",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
