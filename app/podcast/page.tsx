@@ -66,7 +66,7 @@ export default function PodcastPage() {
             >
               <div>
                 <h1 style={{ fontSize: "32px", margin: 0, fontWeight: 800 }}>
-                  SSGPT6 Core Media
+                  SSGPT6 Core
                 </h1>
                 <p
                   style={{
@@ -89,10 +89,10 @@ export default function PodcastPage() {
                 }}
               >
                 <a href="/" style={navLink}>Home</a>
+                <a href="/media" style={navLink}>Media</a>
                 <a href="/videos" style={navLink}>Videos</a>
                 <a href="/blogs" style={navLink}>Blogs</a>
                 <a href="/podcast" style={activeNav}>Podcast</a>
-                <a href="/media" style={navLink}>Media</a>
                 <a href="/dashboard" style={navLink}>Dashboard</a>
               </nav>
             </div>
@@ -106,7 +106,7 @@ export default function PodcastPage() {
                 letterSpacing: "-1px",
               }}
             >
-              Podcast Hub
+              Podcast hub
             </h2>
 
             <p
@@ -115,16 +115,16 @@ export default function PodcastPage() {
                 fontSize: "20px",
                 lineHeight: "1.8",
                 color: "#d9e4f5",
-                maxWidth: "840px",
+                maxWidth: "860px",
               }}
             >
-              Publish founder audio, AI commentary, interviews, guided episodes,
-              public announcements, and future anchor-style spoken programming
-              from one organized platform section.
+              Publish audio episodes, founder messages, public commentary,
+              interviews, guided voice programming, and future AI-assisted audio
+              media in one organized podcast space.
             </p>
           </div>
 
-          <div style={card}>
+          <div style={{ ...card, marginBottom: "24px" }}>
             <h3
               style={{
                 marginTop: 0,
@@ -133,7 +133,7 @@ export default function PodcastPage() {
                 fontSize: "30px",
               }}
             >
-              Featured Podcast Episode
+              Featured episode
             </h3>
 
             <p
@@ -144,15 +144,15 @@ export default function PodcastPage() {
                 marginBottom: "18px",
               }}
             >
-              Upload your featured podcast audio as:
-              <strong> public/featured-podcast.mp3</strong>
+              Use this area for your main episode, founder message, public
+              audio release, or future generated voice presentation.
             </p>
 
             <audio
               controls
               style={{
                 width: "100%",
-                borderRadius: "12px",
+                display: "block",
               }}
             >
               <source src="/featured-podcast.mp3" type="audio/mpeg" />
@@ -164,39 +164,45 @@ export default function PodcastPage() {
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
               gap: "20px",
-              marginTop: "24px",
             }}
           >
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Founder Voice</h3>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Founder Voice
+              </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Personal founder messages, leadership thoughts, and long-term
-                platform vision episodes.
+                Audio messages and direct communication from the founder side of
+                the platform.
               </p>
+              <a href="/about" style={button}>
+                About Founder
+              </a>
             </div>
 
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>AI Commentary</h3>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Interviews
+              </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                AI-assisted narration, topic analysis, and smart commentary
-                generated from your media workflow.
+                Public discussions, guest conversations, and future collaborative
+                voice programming.
               </p>
+              <a href="/contact" style={button}>
+                Contact Team
+              </a>
             </div>
 
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Interviews</h3>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                AI Audio Media
+              </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Conversations, partner interviews, public discussions, and future
-                guest episodes.
+                A future section for AI voiceovers, generated episodes, and
+                automated spoken content.
               </p>
-            </div>
-
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Platform Updates</h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Podcast-style release notes, product updates, and official audio
-                announcements.
-              </p>
+              <a href="/tools" style={button}>
+                Open Tools
+              </a>
             </div>
           </div>
 
@@ -209,29 +215,20 @@ export default function PodcastPage() {
                 fontSize: "30px",
               }}
             >
-              Podcast Distribution
+              Podcast note
             </h3>
             <p
               style={{
                 color: "#4b5563",
                 fontSize: "17px",
                 lineHeight: "1.8",
-                marginBottom: "18px",
+                marginBottom: 0,
               }}
             >
-              This section can later connect to podcast platforms, Apple Podcasts,
-              Spotify podcast destinations, RSS feeds, and your media connector
-              system.
+              This page can later connect to podcast distribution platforms,
+              episode archives, playlist feeds, analytics, subscriber tools, and
+              admin-managed audio publishing workflows.
             </p>
-
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <a href="/media" style={button}>
-                Open Media Connectors
-              </a>
-              <a href="/videos" style={button}>
-                Open Video Library
-              </a>
-            </div>
           </div>
         </section>
       </main>
