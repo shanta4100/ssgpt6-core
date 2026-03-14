@@ -66,7 +66,7 @@ export default function ReleasesPage() {
             >
               <div>
                 <h1 style={{ fontSize: "32px", margin: 0, fontWeight: 800 }}>
-                  SSGPT6 Core Media
+                  SSGPT6 Core
                 </h1>
                 <p
                   style={{
@@ -89,10 +89,10 @@ export default function ReleasesPage() {
                 }}
               >
                 <a href="/" style={navLink}>Home</a>
+                <a href="/media" style={navLink}>Media</a>
                 <a href="/videos" style={navLink}>Videos</a>
                 <a href="/blogs" style={navLink}>Blogs</a>
                 <a href="/releases" style={activeNav}>Releases</a>
-                <a href="/media" style={navLink}>Media</a>
                 <a href="/dashboard" style={navLink}>Dashboard</a>
               </nav>
             </div>
@@ -106,7 +106,7 @@ export default function ReleasesPage() {
                 letterSpacing: "-1px",
               }}
             >
-              Company Releases
+              Company releases
             </h2>
 
             <p
@@ -115,71 +115,115 @@ export default function ReleasesPage() {
                 fontSize: "20px",
                 lineHeight: "1.8",
                 color: "#d9e4f5",
-                maxWidth: "840px",
+                maxWidth: "860px",
               }}
             >
-              Publish official company statements, product notices, platform
-              milestones, public announcements, strategic updates, and formal
-              business communications.
+              Publish official announcements, milestone notes, public company
+              updates, founder statements, launch communications, and future
+              structured press-style releases from one page.
             </p>
+          </div>
+
+          <div style={{ ...card, marginBottom: "24px" }}>
+            <h3
+              style={{
+                marginTop: 0,
+                marginBottom: "14px",
+                color: "#0b1f3a",
+                fontSize: "30px",
+              }}
+            >
+              Featured release
+            </h3>
+
+            <p
+              style={{
+                color: "#4b5563",
+                fontSize: "17px",
+                lineHeight: "1.8",
+                marginBottom: "18px",
+              }}
+            >
+              Use this area for the latest formal update, launch note, public
+              statement, milestone report, or company announcement.
+            </p>
+
+            <div
+              style={{
+                backgroundColor: "#f8fbff",
+                borderRadius: "16px",
+                padding: "20px",
+                border: "1px solid #d6e2f2",
+              }}
+            >
+              <h4
+                style={{
+                  marginTop: 0,
+                  marginBottom: "10px",
+                  color: "#0b1f3a",
+                  fontSize: "24px",
+                }}
+              >
+                Latest announcement
+              </h4>
+              <p
+                style={{
+                  marginTop: 0,
+                  marginBottom: 0,
+                  color: "#42546b",
+                  lineHeight: "1.8",
+                  fontSize: "16px",
+                }}
+              >
+                Add the title, summary, date, or publication notice for your most
+                important release here.
+              </p>
+            </div>
           </div>
 
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
               gap: "20px",
             }}
           >
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Product Launches
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Launch Notes
               </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Announce new platform features, product launches, and media hub
-                expansions.
+                Announce new sections, platform upgrades, and public product
+                releases.
               </p>
-              <a href="#" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-                View Releases →
+              <a href="/media" style={button}>
+                Open Media
               </a>
             </div>
 
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Business Statements
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Founder Statements
               </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Share formal notices, founder communications, company summaries,
-                and public-facing statements.
+                Share direct strategic messaging, founder notes, and public-facing
+                platform direction.
               </p>
-              <a href="#" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-                View Releases →
+              <a href="/about" style={button}>
+                Open About
               </a>
             </div>
 
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Media Announcements
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Business Updates
               </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Publish media updates, content rollouts, podcast launches, and
-                featured programming notices.
+                Publish company milestones, public notices, and structured
+                operational updates.
               </p>
-              <a href="#" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-                View Releases →
-              </a>
-            </div>
-
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Strategic Updates
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Communicate growth plans, platform direction, operational
-                milestones, and structured future goals.
-              </p>
-              <a href="#" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-                View Releases →
+              <a href="/contact" style={button}>
+                Contact Team
               </a>
             </div>
           </div>
@@ -193,29 +237,20 @@ export default function ReleasesPage() {
                 fontSize: "30px",
               }}
             >
-              Releases Operations
+              Releases note
             </h3>
             <p
               style={{
                 color: "#4b5563",
                 fontSize: "17px",
                 lineHeight: "1.8",
-                marginBottom: "18px",
+                marginBottom: 0,
               }}
             >
-              This page can later become a true company newsroom with dated press
-              releases, downloadable statements, media kits, archive filtering,
-              and publishing workflows managed from the admin side.
+              This page can later connect to dated archives, filtered release
+              categories, downloadable statements, press materials, and
+              admin-managed publication workflows.
             </p>
-
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <a href="/blogs" style={button}>
-                Open Blogs
-              </a>
-              <a href="/contact" style={button}>
-                Contact
-              </a>
-            </div>
           </div>
         </section>
       </main>
