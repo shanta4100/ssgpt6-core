@@ -4,7 +4,7 @@ export default function ToolsPage() {
       style={{
         minHeight: "100vh",
         background:
-          "linear-gradient(180deg, #081a36 0%, #0b2347 42%, #f4f7fb 42%, #f4f7fb 100%)",
+          "linear-gradient(180deg, #081a36 0%, #0b2347 42%, #e8eef7 42%, #e8eef7 100%)",
         fontFamily: "Arial, sans-serif",
       }}
     >
@@ -210,10 +210,11 @@ export default function ToolsPage() {
         >
           <div
             style={{
-              backgroundColor: "#ffffff",
+              backgroundColor: "#f1f6fd",
               borderRadius: "22px",
               padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
+              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.12)",
+              border: "1px solid #d6e2f2",
             }}
           >
             <h2
@@ -228,7 +229,7 @@ export default function ToolsPage() {
             </h2>
             <p
               style={{
-                color: "#4b5563",
+                color: "#42546b",
                 fontSize: "17px",
                 lineHeight: "1.8",
                 marginBottom: "20px",
@@ -244,10 +245,11 @@ export default function ToolsPage() {
 
           <div
             style={{
-              backgroundColor: "#ffffff",
+              backgroundColor: "#f1f6fd",
               borderRadius: "22px",
               padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
+              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.12)",
+              border: "1px solid #d6e2f2",
             }}
           >
             <h2
@@ -262,7 +264,7 @@ export default function ToolsPage() {
             </h2>
             <p
               style={{
-                color: "#4b5563",
+                color: "#42546b",
                 fontSize: "17px",
                 lineHeight: "1.8",
                 marginBottom: "20px",
@@ -278,10 +280,11 @@ export default function ToolsPage() {
 
           <div
             style={{
-              backgroundColor: "#ffffff",
+              backgroundColor: "#f1f6fd",
               borderRadius: "22px",
               padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
+              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.12)",
+              border: "1px solid #d6e2f2",
             }}
           >
             <h2
@@ -296,7 +299,7 @@ export default function ToolsPage() {
             </h2>
             <p
               style={{
-                color: "#4b5563",
+                color: "#42546b",
                 fontSize: "17px",
                 lineHeight: "1.8",
                 marginBottom: "20px",
@@ -312,10 +315,11 @@ export default function ToolsPage() {
 
           <div
             style={{
-              backgroundColor: "#ffffff",
+              backgroundColor: "#f1f6fd",
               borderRadius: "22px",
               padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
+              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.12)",
+              border: "1px solid #d6e2f2",
             }}
           >
             <h2
@@ -330,7 +334,7 @@ export default function ToolsPage() {
             </h2>
             <p
               style={{
-                color: "#4b5563",
+                color: "#42546b",
                 fontSize: "17px",
                 lineHeight: "1.8",
                 marginBottom: "20px",
