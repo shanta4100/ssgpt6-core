@@ -1,3 +1,6 @@
+import Image from "next/image";
+import heroLogo from "../public/IMG_6460.png";
+
 export default function HomePage() {
   const navLink = {
     color: "#ffffff",
@@ -175,16 +178,18 @@ export default function HomePage() {
             </div>
 
             <div>
-              <img
-                src="/ssgpt6-hero-logo.png"
+              <Image
+                src={heroLogo}
                 alt="SSGPT6 Core Hero Logo"
                 style={{
                   width: "100%",
+                  height: "auto",
                   borderRadius: "24px",
                   boxShadow: "0 18px 40px rgba(0,0,0,0.28)",
                   border: "1px solid rgba(255,255,255,0.12)",
                   display: "block",
                 }}
+                priority
               />
             </div>
           </div>
@@ -199,26 +204,12 @@ export default function HomePage() {
           }}
         >
           <div style={card}>
-            <h3
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "28px",
-              }}
-            >
-              AI Automation
+            <h3 style={{ marginTop: 0, marginBottom: "14px", color: "#0b1f3a", fontSize: "28px" }}>
+              Tools
             </h3>
-            <p
-              style={{
-                color: "#42546b",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginBottom: "18px",
-              }}
-            >
-              Platform automation, future sleeping-agent systems, workflow
-              control, and intelligent operating logic.
+            <p style={{ color: "#42546b", fontSize: "17px", lineHeight: "1.8", marginBottom: "18px" }}>
+              View the core systems that support automation, infrastructure,
+              monitoring, and intelligent platform growth.
             </p>
             <a href="/tools" style={{ color: "#0b1f3a", fontWeight: 700 }}>
               Go to Tools →
@@ -226,24 +217,10 @@ export default function HomePage() {
           </div>
 
           <div style={card}>
-            <h3
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "28px",
-              }}
-            >
+            <h3 style={{ marginTop: 0, marginBottom: "14px", color: "#0b1f3a", fontSize: "28px" }}>
               About
             </h3>
-            <p
-              style={{
-                color: "#42546b",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginBottom: "18px",
-              }}
-            >
+            <p style={{ color: "#42546b", fontSize: "17px", lineHeight: "1.8", marginBottom: "18px" }}>
               Learn the mission, vision, founder identity, and long-term system
               direction of SSGPT6 Core.
             </p>
@@ -253,24 +230,10 @@ export default function HomePage() {
           </div>
 
           <div style={card}>
-            <h3
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "28px",
-              }}
-            >
+            <h3 style={{ marginTop: 0, marginBottom: "14px", color: "#0b1f3a", fontSize: "28px" }}>
               Contact
             </h3>
-            <p
-              style={{
-                color: "#42546b",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginBottom: "18px",
-              }}
-            >
+            <p style={{ color: "#42546b", fontSize: "17px", lineHeight: "1.8", marginBottom: "18px" }}>
               Reach the platform for support, business coordination, and future
               collaboration under GNAIAAAC LLC.
             </p>
@@ -280,24 +243,10 @@ export default function HomePage() {
           </div>
 
           <div style={card}>
-            <h3
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "28px",
-              }}
-            >
+            <h3 style={{ marginTop: 0, marginBottom: "14px", color: "#0b1f3a", fontSize: "28px" }}>
               Dashboard
             </h3>
-            <p
-              style={{
-                color: "#42546b",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginBottom: "18px",
-              }}
-            >
+            <p style={{ color: "#42546b", fontSize: "17px", lineHeight: "1.8", marginBottom: "18px" }}>
               Open the founder-facing command layer for visibility, structure,
               and future platform control.
             </p>
@@ -305,39 +254,6 @@ export default function HomePage() {
               Go to Dashboard →
             </a>
           </div>
-        </div>
-
-        <div
-          style={{
-            marginTop: "26px",
-            ...card,
-          }}
-        >
-          <h3
-            style={{
-              marginTop: 0,
-              marginBottom: "14px",
-              color: "#0b1f3a",
-              fontSize: "30px",
-            }}
-          >
-            Core Vision
-          </h3>
-
-          <p
-            style={{
-              color: "#42546b",
-              fontSize: "18px",
-              lineHeight: "1.9",
-              marginTop: 0,
-              marginBottom: 0,
-            }}
-          >
-            SSGPT6 Core is designed as a secure, scalable, and intelligent
-            digital foundation that connects AI automation, system monitoring,
-            environmental responsibility, human wellbeing, and future aerospace
-            and energy innovation into one unified platform vision.
-          </p>
         </div>
       </section>
     </main>
