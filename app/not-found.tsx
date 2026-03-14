@@ -1,4 +1,6 @@
-export default function NotFoundPage() {
+import Footer from "./footer";
+
+export default function NotFound() {
   const button = {
     display: "inline-block",
     padding: "14px 22px",
@@ -19,148 +21,118 @@ export default function NotFoundPage() {
     fontWeight: 700,
   } as const;
 
+  const card = {
+    backgroundColor: "#ffffff",
+    borderRadius: "22px",
+    padding: "30px",
+    boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
+    border: "1px solid #d6e2f2",
+    maxWidth: "760px",
+    margin: "0 auto",
+  } as const;
+
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background:
-          "linear-gradient(180deg, #081a36 0%, #0b2347 55%, #e8eef7 55%, #e8eef7 100%)",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      <section
+    <>
+      <main
         style={{
-          maxWidth: "980px",
-          margin: "0 auto",
-          padding: "60px 20px 80px",
-          textAlign: "center",
+          minHeight: "100vh",
+          background:
+            "linear-gradient(180deg, #081a36 0%, #0b2347 42%, #f4f7fb 42%, #f4f7fb 100%)",
+          fontFamily: "Arial, sans-serif",
+          padding: "40px 20px 80px",
         }}
       >
-        <div
+        <section
           style={{
-            background: "linear-gradient(135deg, #081a36 0%, #0b2347 100%)",
-            color: "#ffffff",
-            borderRadius: "28px",
-            padding: "40px 28px",
-            boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
+            maxWidth: "1150px",
+            margin: "0 auto",
           }}
         >
-          <p
-            style={{
-              margin: 0,
-              color: "#c9a227",
-              fontSize: "18px",
-              fontWeight: 700,
-              letterSpacing: "1px",
-            }}
-          >
-            SSGPT6 CORE
-          </p>
-
-          <h1
-            style={{
-              fontSize: "72px",
-              lineHeight: "1",
-              margin: "16px 0 10px 0",
-              fontWeight: 800,
-            }}
-          >
-            404
-          </h1>
-
-          <h2
-            style={{
-              fontSize: "34px",
-              margin: "0 0 16px 0",
-              fontWeight: 800,
-            }}
-          >
-            Page Not Found
-          </h2>
-
-          <p
-            style={{
-              margin: "0 auto",
-              maxWidth: "720px",
-              color: "#d9e4f5",
-              fontSize: "18px",
-              lineHeight: "1.8",
-            }}
-          >
-            The page you are looking for does not exist or may have been moved.
-            Return to the homepage or open the dashboard to continue exploring
-            the SSGPT6 Core platform.
-          </p>
-
           <div
             style={{
-              display: "flex",
-              gap: "14px",
-              justifyContent: "center",
-              flexWrap: "wrap",
-              marginTop: "28px",
+              color: "#ffffff",
+              paddingBottom: "40px",
+              textAlign: "center",
             }}
           >
-            <a href="/" style={button}>
-              Back Home
-            </a>
-
-            <a href="/dashboard" style={secondButton}>
-              Open Dashboard
-            </a>
+            <h1 style={{ fontSize: "32px", margin: 0, fontWeight: 800 }}>
+              SSGPT6 Core
+            </h1>
+            <p
+              style={{
+                marginTop: "8px",
+                marginBottom: 0,
+                color: "#d9e4f5",
+                fontSize: "18px",
+              }}
+            >
+              Intelligent Digital Access Platform
+            </p>
           </div>
-        </div>
 
-        <div
-          style={{
-            marginTop: "24px",
-            backgroundColor: "#f1f6fd",
-            borderRadius: "22px",
-            padding: "28px",
-            boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-            border: "1px solid #d6e2f2",
-          }}
-        >
-          <h3
-            style={{
-              marginTop: 0,
-              color: "#0b1f3a",
-              fontSize: "28px",
-            }}
-          >
-            Helpful Links
-          </h3>
+          <div style={card}>
+            <h2
+              style={{
+                fontSize: "48px",
+                lineHeight: "1.05",
+                marginTop: 0,
+                marginBottom: "16px",
+                fontWeight: 800,
+                letterSpacing: "-1px",
+                color: "#0b1f3a",
+              }}
+            >
+              Page not found
+            </h2>
 
-          <div
-            style={{
-              display: "flex",
-              gap: "12px",
-              justifyContent: "center",
-              flexWrap: "wrap",
-              marginTop: "16px",
-            }}
-          >
-            <a href="/videos" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-              Videos
-            </a>
-            <a href="/blogs" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-              Blogs
-            </a>
-            <a href="/podcast" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-              Podcast
-            </a>
-            <a href="/newsletter" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-              Newsletter
-            </a>
-            <a href="/media" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-              Media
-            </a>
-            <a href="/pricing" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-              Pricing
-            </a>
+            <p
+              style={{
+                color: "#4b5563",
+                fontSize: "18px",
+                lineHeight: "1.8",
+                marginBottom: "24px",
+              }}
+            >
+              The page you are looking for is not available right now. Please go
+              back to the homepage or open one of the main SSGPT6 Core sections.
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                gap: "14px",
+                flexWrap: "wrap",
+                marginBottom: "18px",
+              }}
+            >
+              <a href="/" style={button}>
+                Back Home
+              </a>
+              <a href="/media" style={secondButton}>
+                Open Media
+              </a>
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                gap: "12px",
+                flexWrap: "wrap",
+                color: "#0b1f3a",
+                fontWeight: 700,
+              }}
+            >
+              <a href="/tools">Tools</a>
+              <a href="/videos">Videos</a>
+              <a href="/blogs">Blogs</a>
+              <a href="/podcast">Podcast</a>
+              <a href="/pricing">Pricing</a>
+              <a href="/contact">Contact</a>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
