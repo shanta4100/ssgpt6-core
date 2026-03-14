@@ -1,4 +1,39 @@
 export default function ContactPage() {
+  const navLink = {
+    color: "#ffffff",
+    textDecoration: "none",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    fontWeight: 600,
+  } as const;
+
+  const activeNav = {
+    color: "#0b1f3a",
+    textDecoration: "none",
+    padding: "10px 16px",
+    borderRadius: "12px",
+    backgroundColor: "#c9a227",
+    fontWeight: 700,
+  } as const;
+
+  const card = {
+    backgroundColor: "#ffffff",
+    borderRadius: "22px",
+    padding: "26px",
+    boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
+    border: "1px solid #d6e2f2",
+  } as const;
+
+  const button = {
+    display: "inline-block",
+    padding: "12px 18px",
+    borderRadius: "12px",
+    backgroundColor: "#0b1f3a",
+    color: "#ffffff",
+    textDecoration: "none",
+    fontWeight: 700,
+  } as const;
+
   return (
     <main
       style={{
@@ -10,19 +45,56 @@ export default function ContactPage() {
     >
       <section
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1150px",
           margin: "0 auto",
           padding: "40px 20px 80px",
         }}
       >
-        <div
-          style={{
-            color: "#ffffff",
-            paddingTop: "10px",
-            paddingBottom: "42px",
-          }}
-        >
-          <h1
+        <div style={{ color: "#ffffff", paddingBottom: "40px" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: "20px",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "space-between",
+              marginBottom: "30px",
+            }}
+          >
+            <div>
+              <h1 style={{ fontSize: "32px", margin: 0, fontWeight: 800 }}>
+                SSGPT6 Core
+              </h1>
+              <p
+                style={{
+                  marginTop: "8px",
+                  marginBottom: 0,
+                  color: "#d9e4f5",
+                  fontSize: "18px",
+                }}
+              >
+                Contact & Support
+              </p>
+            </div>
+
+            <nav
+              style={{
+                display: "flex",
+                gap: "10px",
+                flexWrap: "wrap",
+                alignItems: "center",
+              }}
+            >
+              <a href="/" style={navLink}>Home</a>
+              <a href="/tools" style={navLink}>Tools</a>
+              <a href="/about" style={navLink}>About</a>
+              <a href="/contact" style={activeNav}>Contact</a>
+              <a href="/media" style={navLink}>Media</a>
+              <a href="/dashboard" style={navLink}>Dashboard</a>
+            </nav>
+          </div>
+
+          <h2
             style={{
               fontSize: "56px",
               lineHeight: "1.05",
@@ -32,7 +104,7 @@ export default function ContactPage() {
             }}
           >
             Contact SSGPT6 Core
-          </h1>
+          </h2>
 
           <p
             style={{
@@ -43,232 +115,111 @@ export default function ContactPage() {
               maxWidth: "860px",
             }}
           >
-            Contact the platform for support, business inquiries, collaboration,
-            and future development coordination.
+            Reach the platform for support, business inquiries, media requests,
+            partnership discussions, and future company coordination under
+            GNAIAAAC LLC.
           </p>
-
-          <div
-            style={{
-              display: "flex",
-              gap: "14px",
-              flexWrap: "wrap",
-              marginTop: "28px",
-            }}
-          >
-            <a
-              href="/"
-              style={{
-                display: "inline-block",
-                padding: "14px 22px",
-                borderRadius: "14px",
-                backgroundColor: "#c9a227",
-                color: "#0b1f3a",
-                textDecoration: "none",
-                fontWeight: 700,
-              }}
-            >
-              Back Home
-            </a>
-
-            <a
-              href="/dashboard"
-              style={{
-                display: "inline-block",
-                padding: "14px 22px",
-                borderRadius: "14px",
-                backgroundColor: "#ffffff",
-                color: "#0b1f3a",
-                textDecoration: "none",
-                fontWeight: 700,
-              }}
-            >
-              Open Dashboard
-            </a>
-          </div>
         </div>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
             gap: "20px",
           }}
         >
-          <div
-            style={{
-              backgroundColor: "#ffffff",
-              borderRadius: "22px",
-              padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-            }}
-          >
-            <h2
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "30px",
-              }}
-            >
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
               Support
-            </h2>
-
-            <p
-              style={{
-                color: "#4b5563",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginTop: 0,
-              }}
-            >
-              For help with platform pages, deployment, navigation, and future
-              features, use the contact channels below.
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              For platform questions, page issues, media access, or general
+              support inquiries.
             </p>
-
             <p
               style={{
+                color: "#0b1f3a",
+                fontWeight: 700,
                 marginBottom: 0,
-                color: "#111827",
-                fontSize: "17px",
-                lineHeight: "1.9",
               }}
             >
-              Email: <strong>ssgpt6@aol.com</strong>
+              ssgpt6@aol.com
             </p>
           </div>
 
-          <div
-            style={{
-              backgroundColor: "#ffffff",
-              borderRadius: "22px",
-              padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-            }}
-          >
-            <h2
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "30px",
-              }}
-            >
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
               Business
-            </h2>
-
-            <p
-              style={{
-                color: "#4b5563",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginTop: 0,
-              }}
-            >
-              Contact for partnerships, product inquiries, founder-led
-              collaboration, and future system development opportunities.
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              For partnership opportunities, company communication, and business
+              collaboration requests.
             </p>
-
             <p
               style={{
+                color: "#0b1f3a",
+                fontWeight: 700,
                 marginBottom: 0,
-                color: "#111827",
-                fontSize: "17px",
-                lineHeight: "1.9",
               }}
             >
-              Organization: <strong>GNAIAAAC LLC</strong>
+              GNAIAAAC LLC
             </p>
           </div>
 
-          <div
-            style={{
-              backgroundColor: "#ffffff",
-              borderRadius: "22px",
-              padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-            }}
-          >
-            <h2
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "30px",
-              }}
-            >
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
               Founder
-            </h2>
-
-            <p
-              style={{
-                color: "#4b5563",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginTop: 0,
-              }}
-            >
-              The SSGPT6 Core platform is built and directed by the founder as
-              a long-term intelligent digital access system.
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              Founder-led project direction, long-term vision, and executive
+              oversight for the SSGPT6 Core platform.
             </p>
-
             <p
               style={{
+                color: "#0b1f3a",
+                fontWeight: 700,
                 marginBottom: 0,
-                color: "#111827",
-                fontSize: "17px",
-                lineHeight: "1.9",
               }}
             >
-              Founder: <strong>Arifur Rahman Shanta</strong>
+              Arifur Rahman Shanta
             </p>
           </div>
         </div>
 
-        <div
-          style={{
-            marginTop: "24px",
-            backgroundColor: "#ffffff",
-            borderRadius: "22px",
-            padding: "30px",
-            boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-          }}
-        >
-          <h2
+        <div style={{ ...card, marginTop: "24px" }}>
+          <h3
             style={{
               marginTop: 0,
-              marginBottom: "18px",
+              marginBottom: "14px",
               color: "#0b1f3a",
-              fontSize: "34px",
+              fontSize: "30px",
             }}
           >
             Contact Summary
-          </h2>
+          </h3>
 
           <p
             style={{
               color: "#4b5563",
-              fontSize: "18px",
-              lineHeight: "1.9",
-              marginTop: 0,
+              fontSize: "17px",
+              lineHeight: "1.8",
+              marginBottom: "18px",
             }}
           >
-            This page serves as the main contact layer for support, platform
-            inquiries, and future business coordination. As the SSGPT6 Core
-            system expands, this contact page can later be upgraded with forms,
-            ticketing, and dedicated service channels.
+            This page serves as the public contact layer for SSGPT6 Core. It can
+            later grow into a full support center with forms, ticketing, admin
+            routing, partner contact paths, and client-specific communication
+            workflows.
           </p>
 
-          <p
-            style={{
-              color: "#4b5563",
-              fontSize: "18px",
-              lineHeight: "1.9",
-              marginBottom: 0,
-            }}
-          >
-            For now, this provides a clean, professional public-facing contact
-            destination that fits the platform design and founder-led structure.
-          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <a href="/media" style={button}>
+              Open Media Hub
+            </a>
+            <a href="/pricing" style={button}>
+              View Pricing
+            </a>
+          </div>
         </div>
       </section>
     </main>
