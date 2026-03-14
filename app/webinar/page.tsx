@@ -66,7 +66,7 @@ export default function WebinarPage() {
             >
               <div>
                 <h1 style={{ fontSize: "32px", margin: 0, fontWeight: 800 }}>
-                  SSGPT6 Core Media
+                  SSGPT6 Core
                 </h1>
                 <p
                   style={{
@@ -89,10 +89,10 @@ export default function WebinarPage() {
                 }}
               >
                 <a href="/" style={navLink}>Home</a>
+                <a href="/media" style={navLink}>Media</a>
                 <a href="/videos" style={navLink}>Videos</a>
                 <a href="/blogs" style={navLink}>Blogs</a>
                 <a href="/webinar" style={activeNav}>Webinar</a>
-                <a href="/media" style={navLink}>Media</a>
                 <a href="/dashboard" style={navLink}>Dashboard</a>
               </nav>
             </div>
@@ -106,7 +106,7 @@ export default function WebinarPage() {
                 letterSpacing: "-1px",
               }}
             >
-              Webinar Hub
+              Webinar hub
             </h2>
 
             <p
@@ -115,16 +115,16 @@ export default function WebinarPage() {
                 fontSize: "20px",
                 lineHeight: "1.8",
                 color: "#d9e4f5",
-                maxWidth: "840px",
+                maxWidth: "860px",
               }}
             >
-              Organize live sessions, replay libraries, training events, founder
-              briefings, business showcases, and future interactive learning
-              experiences from one webinar section.
+              Organize public sessions, internal learning events, replay content,
+              live presentations, founder briefings, and future platform
+              education programs from one webinar center.
             </p>
           </div>
 
-          <div style={card}>
+          <div style={{ ...card, marginBottom: "24px" }}>
             <h3
               style={{
                 marginTop: 0,
@@ -133,7 +133,7 @@ export default function WebinarPage() {
                 fontSize: "30px",
               }}
             >
-              Featured Webinar
+              Featured webinar
             </h3>
 
             <p
@@ -144,8 +144,8 @@ export default function WebinarPage() {
                 marginBottom: "18px",
               }}
             >
-              Use this section for your next public webinar, replay session, or
-              internal business learning event.
+              Use this area for your main live event, replay spotlight,
+              educational session, or internal training presentation.
             </p>
 
             <div
@@ -164,7 +164,7 @@ export default function WebinarPage() {
                   fontSize: "24px",
                 }}
               >
-                Upcoming Session
+                Upcoming session
               </h4>
               <p
                 style={{
@@ -175,8 +175,8 @@ export default function WebinarPage() {
                   fontSize: "16px",
                 }}
               >
-                Add your webinar title, time, registration details, replay link,
-                or featured event summary here.
+                Add your title, date, time, replay notice, or session summary
+                here.
               </p>
             </div>
           </div>
@@ -186,39 +186,43 @@ export default function WebinarPage() {
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
               gap: "20px",
-              marginTop: "24px",
             }}
           >
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Live Sessions</h3>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Live Events
+              </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Schedule and present live webinars, founder briefings, and public
-                discussion sessions.
+                Host scheduled live sessions for your audience or company users.
               </p>
+              <a href="/contact" style={button}>
+                Contact Team
+              </a>
             </div>
 
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Replay Library</h3>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Replay Library
+              </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Store past webinar recordings and make them available as replay
-                content for your audience.
+                Keep webinar recordings available for later viewing and reuse.
               </p>
+              <a href="/videos" style={button}>
+                Open Videos
+              </a>
             </div>
 
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Training Events</h3>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Internal Learning
+              </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Use webinars for education, onboarding, product training, and
-                guided learning experiences.
+                Support internal training, knowledge sessions, and protected team
+                education.
               </p>
-            </div>
-
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Business Showcases</h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Highlight business presentations, platform demonstrations, and
-                future company announcements.
-              </p>
+              <a href="/admin" style={button}>
+                Open Admin
+              </a>
             </div>
           </div>
 
@@ -231,29 +235,20 @@ export default function WebinarPage() {
                 fontSize: "30px",
               }}
             >
-              Webinar Operations
+              Webinar note
             </h3>
             <p
               style={{
                 color: "#4b5563",
                 fontSize: "17px",
                 lineHeight: "1.8",
-                marginBottom: "18px",
+                marginBottom: 0,
               }}
             >
-              This page can later connect with registrations, calendar booking,
-              replay hosting, admin webinar controls, event reminders, and
-              subscriber follow-up workflows.
+              This page can later connect to registrations, reminders, replay
+              hosting, protected event access, subscriber follow-up, and
+              admin-managed webinar publishing workflows.
             </p>
-
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <a href="/newsletter" style={button}>
-                Open Newsletter
-              </a>
-              <a href="/media" style={button}>
-                Open Media Page
-              </a>
-            </div>
           </div>
         </section>
       </main>
