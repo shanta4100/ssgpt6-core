@@ -1,4 +1,39 @@
 export default function AboutPage() {
+  const navLink = {
+    color: "#ffffff",
+    textDecoration: "none",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    fontWeight: 600,
+  } as const;
+
+  const activeNav = {
+    color: "#0b1f3a",
+    textDecoration: "none",
+    padding: "10px 16px",
+    borderRadius: "12px",
+    backgroundColor: "#c9a227",
+    fontWeight: 700,
+  } as const;
+
+  const card = {
+    backgroundColor: "#ffffff",
+    borderRadius: "22px",
+    padding: "26px",
+    boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
+    border: "1px solid #d6e2f2",
+  } as const;
+
+  const button = {
+    display: "inline-block",
+    padding: "12px 18px",
+    borderRadius: "12px",
+    backgroundColor: "#0b1f3a",
+    color: "#ffffff",
+    textDecoration: "none",
+    fontWeight: 700,
+  } as const;
+
   return (
     <main
       style={{
@@ -10,19 +45,56 @@ export default function AboutPage() {
     >
       <section
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1150px",
           margin: "0 auto",
           padding: "40px 20px 80px",
         }}
       >
-        <div
-          style={{
-            color: "#ffffff",
-            paddingTop: "10px",
-            paddingBottom: "42px",
-          }}
-        >
-          <h1
+        <div style={{ color: "#ffffff", paddingBottom: "40px" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: "20px",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "space-between",
+              marginBottom: "30px",
+            }}
+          >
+            <div>
+              <h1 style={{ fontSize: "32px", margin: 0, fontWeight: 800 }}>
+                SSGPT6 Core
+              </h1>
+              <p
+                style={{
+                  marginTop: "8px",
+                  marginBottom: 0,
+                  color: "#d9e4f5",
+                  fontSize: "18px",
+                }}
+              >
+                About the Platform
+              </p>
+            </div>
+
+            <nav
+              style={{
+                display: "flex",
+                gap: "10px",
+                flexWrap: "wrap",
+                alignItems: "center",
+              }}
+            >
+              <a href="/" style={navLink}>Home</a>
+              <a href="/tools" style={navLink}>Tools</a>
+              <a href="/about" style={activeNav}>About</a>
+              <a href="/media" style={navLink}>Media</a>
+              <a href="/pricing" style={navLink}>Pricing</a>
+              <a href="/dashboard" style={navLink}>Dashboard</a>
+            </nav>
+          </div>
+
+          <h2
             style={{
               fontSize: "56px",
               lineHeight: "1.05",
@@ -32,7 +104,7 @@ export default function AboutPage() {
             }}
           >
             About SSGPT6 Core
-          </h1>
+          </h2>
 
           <p
             style={{
@@ -44,49 +116,9 @@ export default function AboutPage() {
             }}
           >
             SSGPT6 Core is an intelligent digital access platform built around
-            practical AI, secure infrastructure, cloud monitoring, and founder-led
-            control. It is designed to grow into a clean, stable, and expandable
-            system for automation, governance, and future platform services.
+            media publishing, automation, secure infrastructure, platform
+            operations, and future-ready business systems under GNAIAAAC LLC.
           </p>
-
-          <div
-            style={{
-              display: "flex",
-              gap: "14px",
-              flexWrap: "wrap",
-              marginTop: "28px",
-            }}
-          >
-            <a
-              href="/"
-              style={{
-                display: "inline-block",
-                padding: "14px 22px",
-                borderRadius: "14px",
-                backgroundColor: "#c9a227",
-                color: "#0b1f3a",
-                textDecoration: "none",
-                fontWeight: 700,
-              }}
-            >
-              Back Home
-            </a>
-
-            <a
-              href="/dashboard"
-              style={{
-                display: "inline-block",
-                padding: "14px 22px",
-                borderRadius: "14px",
-                backgroundColor: "#ffffff",
-                color: "#0b1f3a",
-                textDecoration: "none",
-                fontWeight: 700,
-              }}
-            >
-              Open Dashboard
-            </a>
-          </div>
         </div>
 
         <div
@@ -96,149 +128,75 @@ export default function AboutPage() {
             gap: "20px",
           }}
         >
-          <div
-            style={{
-              backgroundColor: "#ffffff",
-              borderRadius: "22px",
-              padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-            }}
-          >
-            <h2
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "30px",
-              }}
-            >
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
               Mission
-            </h2>
-            <p
-              style={{
-                color: "#4b5563",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                margin: 0,
-              }}
-            >
-              Build a trustworthy digital platform where AI tools, secure systems,
-              and practical workflows come together in a simple and usable way.
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              Build a practical platform where AI tools, media systems, secure
+              infrastructure, and public communication work together in one
+              accessible environment.
             </p>
           </div>
 
-          <div
-            style={{
-              backgroundColor: "#ffffff",
-              borderRadius: "22px",
-              padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-            }}
-          >
-            <h2
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "30px",
-              }}
-            >
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
               Vision
-            </h2>
-            <p
-              style={{
-                color: "#4b5563",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                margin: 0,
-              }}
-            >
-              Grow SSGPT6 Core into a strong foundation for automation,
-              monitoring, governance, and future intelligent services across
-              multiple connected systems.
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              Grow SSGPT6 Core into a unified media, automation, and intelligent
+              digital platform supporting public audiences, creators, and future
+              business operations.
             </p>
           </div>
 
-          <div
-            style={{
-              backgroundColor: "#ffffff",
-              borderRadius: "22px",
-              padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-            }}
-          >
-            <h2
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "30px",
-              }}
-            >
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
               Core Focus
-            </h2>
-            <p
-              style={{
-                color: "#4b5563",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                margin: 0,
-              }}
-            >
-              The platform focuses on AI automation, secure deployment structure,
-              cloud health visibility, developer integration, and clean founder
-              control.
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              The platform focuses on videos, blogs, podcasts, newsletters,
+              webinars, releases, media connectors, and future automation
+              workflows.
             </p>
           </div>
         </div>
 
-        <div
-          style={{
-            marginTop: "24px",
-            backgroundColor: "#ffffff",
-            borderRadius: "22px",
-            padding: "30px",
-            boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-          }}
-        >
-          <h2
+        <div style={{ ...card, marginTop: "24px" }}>
+          <h3
             style={{
               marginTop: 0,
-              marginBottom: "18px",
+              marginBottom: "14px",
               color: "#0b1f3a",
-              fontSize: "34px",
+              fontSize: "30px",
             }}
           >
             Platform Summary
-          </h2>
+          </h3>
 
           <p
             style={{
               color: "#4b5563",
-              fontSize: "18px",
-              lineHeight: "1.9",
-              marginTop: 0,
+              fontSize: "17px",
+              lineHeight: "1.8",
+              marginBottom: "18px",
             }}
           >
-            SSGPT6 Core is structured as a founder-led platform with a strong
-            emphasis on clarity, reliability, and future expansion. The design
-            direction combines a professional public-facing experience with an
-            internal system mindset, making it suitable for dashboards, tools,
-            intelligent workflows, and platform services.
+            SSGPT6 Core is designed as a founder-led digital platform that
+            combines media publishing, structured public communication,
+            automation systems, and scalable web operations. It is meant to act
+            as both a public-facing media company website and a future internal
+            operations environment.
           </p>
 
-          <p
-            style={{
-              color: "#4b5563",
-              fontSize: "18px",
-              lineHeight: "1.9",
-              marginBottom: 0,
-            }}
-          >
-            This project is intended to support practical AI usage rather than
-            abstract ideas alone. It aims to provide a stable digital base for
-            real operations, secure infrastructure, and scalable future growth.
-          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <a href="/media" style={button}>
+              Open Media Hub
+            </a>
+            <a href="/contact" style={button}>
+              Contact
+            </a>
+          </div>
         </div>
       </section>
     </main>
