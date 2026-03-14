@@ -1,27 +1,56 @@
 export default function ToolsPage() {
+  const navLink = {
+    color: "#ffffff",
+    textDecoration: "none",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    fontWeight: 600,
+  } as const;
+
+  const activeNav = {
+    color: "#0b1f3a",
+    textDecoration: "none",
+    padding: "10px 16px",
+    borderRadius: "12px",
+    backgroundColor: "#c9a227",
+    fontWeight: 700,
+  } as const;
+
+  const card = {
+    backgroundColor: "#ffffff",
+    borderRadius: "22px",
+    padding: "26px",
+    boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
+    border: "1px solid #d6e2f2",
+  } as const;
+
+  const button = {
+    display: "inline-block",
+    padding: "12px 18px",
+    borderRadius: "12px",
+    backgroundColor: "#0b1f3a",
+    color: "#ffffff",
+    textDecoration: "none",
+    fontWeight: 700,
+  } as const;
+
   return (
     <main
       style={{
         minHeight: "100vh",
         background:
-          "linear-gradient(180deg, #081a36 0%, #0b2347 42%, #e8eef7 42%, #e8eef7 100%)",
+          "linear-gradient(180deg, #081a36 0%, #0b2347 42%, #f4f7fb 42%, #f4f7fb 100%)",
         fontFamily: "Arial, sans-serif",
       }}
     >
       <section
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1150px",
           margin: "0 auto",
           padding: "40px 20px 80px",
         }}
       >
-        <div
-          style={{
-            color: "#ffffff",
-            paddingTop: "10px",
-            paddingBottom: "42px",
-          }}
-        >
+        <div style={{ color: "#ffffff", paddingBottom: "40px" }}>
           <div
             style={{
               display: "flex",
@@ -33,13 +62,7 @@ export default function ToolsPage() {
             }}
           >
             <div>
-              <h1
-                style={{
-                  fontSize: "32px",
-                  margin: 0,
-                  fontWeight: 800,
-                }}
-              >
+              <h1 style={{ fontSize: "32px", margin: 0, fontWeight: 800 }}>
                 SSGPT6 Core
               </h1>
               <p
@@ -50,7 +73,7 @@ export default function ToolsPage() {
                   fontSize: "18px",
                 }}
               >
-                Intelligent Digital Access Platform
+                Tools & Automation Hub
               </p>
             </div>
 
@@ -62,75 +85,12 @@ export default function ToolsPage() {
                 alignItems: "center",
               }}
             >
-              <a
-                href="/"
-                style={{
-                  color: "#ffffff",
-                  textDecoration: "none",
-                  padding: "10px 14px",
-                  borderRadius: "12px",
-                  backgroundColor: "transparent",
-                  fontWeight: 600,
-                }}
-              >
-                Home
-              </a>
-
-              <a
-                href="/tools"
-                style={{
-                  color: "#0b1f3a",
-                  textDecoration: "none",
-                  padding: "10px 16px",
-                  borderRadius: "12px",
-                  backgroundColor: "#c9a227",
-                  fontWeight: 700,
-                }}
-              >
-                Tools
-              </a>
-
-              <a
-                href="/about"
-                style={{
-                  color: "#ffffff",
-                  textDecoration: "none",
-                  padding: "10px 14px",
-                  borderRadius: "12px",
-                  backgroundColor: "transparent",
-                  fontWeight: 600,
-                }}
-              >
-                About
-              </a>
-
-              <a
-                href="/contact"
-                style={{
-                  color: "#ffffff",
-                  textDecoration: "none",
-                  padding: "10px 14px",
-                  borderRadius: "12px",
-                  backgroundColor: "transparent",
-                  fontWeight: 600,
-                }}
-              >
-                Contact
-              </a>
-
-              <a
-                href="/dashboard"
-                style={{
-                  color: "#ffffff",
-                  textDecoration: "none",
-                  padding: "10px 14px",
-                  borderRadius: "12px",
-                  backgroundColor: "transparent",
-                  fontWeight: 600,
-                }}
-              >
-                Dashboard
-              </a>
+              <a href="/" style={navLink}>Home</a>
+              <a href="/tools" style={activeNav}>Tools</a>
+              <a href="/videos" style={navLink}>Videos</a>
+              <a href="/media" style={navLink}>Media</a>
+              <a href="/pricing" style={navLink}>Pricing</a>
+              <a href="/dashboard" style={navLink}>Dashboard</a>
             </nav>
           </div>
 
@@ -143,7 +103,7 @@ export default function ToolsPage() {
               letterSpacing: "-1px",
             }}
           >
-            SSGPT6 Tools
+            Tools & Automation Hub
           </h2>
 
           <p
@@ -152,52 +112,13 @@ export default function ToolsPage() {
               fontSize: "20px",
               lineHeight: "1.8",
               color: "#d9e4f5",
-              maxWidth: "820px",
+              maxWidth: "840px",
             }}
           >
-            A clean overview of the core systems inside the SSGPT6 platform.
-            These tools form the foundation for automation, infrastructure,
-            monitoring, and intelligent digital access.
+            Explore the core systems that support automation, secure
+            infrastructure, cloud monitoring, publishing operations, and future
+            AI sleeping-agent workflows across the SSGPT6 platform.
           </p>
-
-          <div
-            style={{
-              display: "flex",
-              gap: "14px",
-              flexWrap: "wrap",
-              marginTop: "28px",
-            }}
-          >
-            <a
-              href="/"
-              style={{
-                display: "inline-block",
-                padding: "14px 22px",
-                borderRadius: "14px",
-                backgroundColor: "#c9a227",
-                color: "#0b1f3a",
-                textDecoration: "none",
-                fontWeight: 700,
-              }}
-            >
-              Back Home
-            </a>
-
-            <a
-              href="/dashboard"
-              style={{
-                display: "inline-block",
-                padding: "14px 22px",
-                borderRadius: "14px",
-                backgroundColor: "#ffffff",
-                color: "#0b1f3a",
-                textDecoration: "none",
-                fontWeight: 700,
-              }}
-            >
-              Open Dashboard
-            </a>
-          </div>
         </div>
 
         <div
@@ -205,148 +126,111 @@ export default function ToolsPage() {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
             gap: "20px",
-            marginTop: "8px",
           }}
         >
-          <div
-            style={{
-              backgroundColor: "#f1f6fd",
-              borderRadius: "22px",
-              padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.12)",
-              border: "1px solid #d6e2f2",
-            }}
-          >
-            <h2
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "30px",
-              }}
-            >
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
               AI Automation
-            </h2>
-            <p
-              style={{
-                color: "#42546b",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginBottom: "20px",
-              }}
-            >
-              Workflow execution, future sleeping-agent systems, task
-              orchestration, and platform automation control.
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              Workflow execution, future sleeping-agent systems, orchestration,
+              and smart operational control.
             </p>
-            <strong style={{ color: "#0b1f3a", fontSize: "18px" }}>
-              Status: Active Foundation
-            </strong>
+            <a href="/dashboard" style={button}>
+              Open Dashboard
+            </a>
           </div>
 
-          <div
-            style={{
-              backgroundColor: "#f1f6fd",
-              borderRadius: "22px",
-              padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.12)",
-              border: "1px solid #d6e2f2",
-            }}
-          >
-            <h2
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "30px",
-              }}
-            >
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
               Secure Infrastructure
-            </h2>
-            <p
-              style={{
-                color: "#42546b",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginBottom: "20px",
-              }}
-            >
-              Stable deployment architecture, clean hosting flow, domain
-              routing, and core platform protection.
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              Clean hosting flow, deployment stability, domain routing, and core
+              platform protection.
             </p>
-            <strong style={{ color: "#0b1f3a", fontSize: "18px" }}>
-              Status: Stable
-            </strong>
+            <a href="/about" style={button}>
+              Learn More
+            </a>
           </div>
 
-          <div
-            style={{
-              backgroundColor: "#f1f6fd",
-              borderRadius: "22px",
-              padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.12)",
-              border: "1px solid #d6e2f2",
-            }}
-          >
-            <h2
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "30px",
-              }}
-            >
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
               Cloud Monitoring
-            </h2>
-            <p
-              style={{
-                color: "#42546b",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginBottom: "20px",
-              }}
-            >
-              Visibility into system health, deployment readiness, and future
-              diagnostics across cloud environments.
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              Visibility into system health, diagnostics, deployment readiness,
+              and operational awareness.
             </p>
-            <strong style={{ color: "#0b1f3a", fontSize: "18px" }}>
-              Status: Expanding
-            </strong>
+            <a href="/media" style={button}>
+              Open Media
+            </a>
           </div>
 
-          <div
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
+              Developer Integration
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              GitHub-connected workflows, modular expansion, APIs, and future
+              developer tooling.
+            </p>
+            <a href="/contact" style={button}>
+              Contact
+            </a>
+          </div>
+
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
+              Publishing Systems
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              Support for blogs, newsletters, videos, podcasts, webinars, and
+              official company releases.
+            </p>
+            <a href="/blogs" style={button}>
+              Open Blogs
+            </a>
+          </div>
+
+          <div style={card}>
+            <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
+              Media Connector Layer
+            </h3>
+            <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+              Connect audiences to supported listening, viewing, and content
+              access destinations from one hub.
+            </p>
+            <a href="/media" style={button}>
+              Open Connectors
+            </a>
+          </div>
+        </div>
+
+        <div style={{ ...card, marginTop: "24px" }}>
+          <h3
             style={{
-              backgroundColor: "#f1f6fd",
-              borderRadius: "22px",
-              padding: "28px",
-              boxShadow: "0 12px 30px rgba(11, 31, 58, 0.12)",
-              border: "1px solid #d6e2f2",
+              marginTop: 0,
+              marginBottom: "14px",
+              color: "#0b1f3a",
+              fontSize: "30px",
             }}
           >
-            <h2
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "30px",
-              }}
-            >
-              Developer Integration
-            </h2>
-            <p
-              style={{
-                color: "#42546b",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginBottom: "20px",
-              }}
-            >
-              GitHub-connected workflows, future API modules, and a modular
-              expansion path for the full SSGPT6 ecosystem.
-            </p>
-            <strong style={{ color: "#0b1f3a", fontSize: "18px" }}>
-              Status: Ready
-            </strong>
-          </div>
+            Platform Operations Note
+          </h3>
+          <p
+            style={{
+              color: "#4b5563",
+              fontSize: "17px",
+              lineHeight: "1.8",
+              marginBottom: 0,
+            }}
+          >
+            This tools page acts as the operational entry point for the SSGPT6
+            Core system. It can later expand into a real admin toolset with
+            automation controls, usage analytics, integrations, account tools,
+            diagnostics, and self-managed workflows.
+          </p>
         </div>
       </section>
     </main>
