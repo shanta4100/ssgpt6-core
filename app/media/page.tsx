@@ -66,7 +66,7 @@ export default function MediaPage() {
             >
               <div>
                 <h1 style={{ fontSize: "32px", margin: 0, fontWeight: 800 }}>
-                  SSGPT6 Core Media
+                  SSGPT6 Core
                 </h1>
                 <p
                   style={{
@@ -76,7 +76,7 @@ export default function MediaPage() {
                     fontSize: "18px",
                   }}
                 >
-                  Streaming Connectors & Media Access
+                  Media Hub
                 </p>
               </div>
 
@@ -89,9 +89,9 @@ export default function MediaPage() {
                 }}
               >
                 <a href="/" style={navLink}>Home</a>
-                <a href="/videos" style={navLink}>Videos</a>
-                <a href="/blogs" style={navLink}>Blogs</a>
+                <a href="/tools" style={navLink}>Tools</a>
                 <a href="/media" style={activeNav}>Media</a>
+                <a href="/videos" style={navLink}>Videos</a>
                 <a href="/pricing" style={navLink}>Pricing</a>
                 <a href="/dashboard" style={navLink}>Dashboard</a>
               </nav>
@@ -106,7 +106,7 @@ export default function MediaPage() {
                 letterSpacing: "-1px",
               }}
             >
-              Media Connectors
+              Central media access
             </h2>
 
             <p
@@ -115,12 +115,12 @@ export default function MediaPage() {
                 fontSize: "20px",
                 lineHeight: "1.8",
                 color: "#d9e4f5",
-                maxWidth: "840px",
+                maxWidth: "860px",
               }}
             >
-              SSGPT6 Core can act as a clean media hub that directs users to
-              approved listening and viewing destinations while keeping your
-              brand, customer service, and content organization in one place.
+              Explore the SSGPT6 Core content network across podcast, blogs,
+              newsletter, webinars, company releases, videos, and future public
+              media distribution systems.
             </p>
           </div>
 
@@ -132,80 +132,80 @@ export default function MediaPage() {
             }}
           >
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Apple Music
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Podcast
               </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Direct your audience to Apple Music using approved listening or
-                promotional links.
-              </p>
-              <a href="#" style={button}>
-                Open Apple Music
-              </a>
-            </div>
-
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Spotify
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Connect listeners to Spotify playlists, episodes, or public audio
-                destinations.
-              </p>
-              <a href="#" style={button}>
-                Open Spotify
-              </a>
-            </div>
-
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Amazon Music
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Send users to Amazon Music content and future partner-approved
-                media channels.
-              </p>
-              <a href="#" style={button}>
-                Open Amazon Music
-              </a>
-            </div>
-
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Netflix
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Provide viewing destination links and future media availability
-                references where appropriate.
-              </p>
-              <a href="#" style={button}>
-                Open Netflix
-              </a>
-            </div>
-
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                YouTube
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Route public traffic to your video channel, releases, clips, and
-                featured programming.
-              </p>
-              <a href="#" style={button}>
-                Open YouTube
-              </a>
-            </div>
-
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Podcast Platforms
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Group podcast access in one section and connect users to supported
-                listening destinations.
+                Voice content, interviews, discussions, and future audio channel
+                distribution.
               </p>
               <a href="/podcast" style={button}>
-                Open Podcast Hub
+                Open Podcast
+              </a>
+            </div>
+
+            <div style={card}>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Blogs
+              </h3>
+              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+                Editorial posts, founder writing, company insights, and platform
+                updates.
+              </p>
+              <a href="/blogs" style={button}>
+                Open Blogs
+              </a>
+            </div>
+
+            <div style={card}>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Newsletter
+              </h3>
+              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+                Subscriber communication, scheduled updates, and audience growth
+                tools.
+              </p>
+              <a href="/newsletter" style={button}>
+                Open Newsletter
+              </a>
+            </div>
+
+            <div style={card}>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Webinar
+              </h3>
+              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+                Live sessions, events, guided presentations, and future learning
+                broadcasts.
+              </p>
+              <a href="/webinar" style={button}>
+                Open Webinar
+              </a>
+            </div>
+
+            <div style={card}>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Company Releases
+              </h3>
+              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+                Official announcements, launch notices, press-style updates, and
+                public statements.
+              </p>
+              <a href="/releases" style={button}>
+                Open Releases
+              </a>
+            </div>
+
+            <div style={card}>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Video Library
+              </h3>
+              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
+                Featured video access, platform media, and future automated video
+                publishing.
+              </p>
+              <a href="/videos" style={button}>
+                Open Videos
               </a>
             </div>
           </div>
@@ -219,7 +219,7 @@ export default function MediaPage() {
                 fontSize: "30px",
               }}
             >
-              Media Operations Note
+              Media operations note
             </h3>
             <p
               style={{
@@ -229,10 +229,10 @@ export default function MediaPage() {
                 marginBottom: 0,
               }}
             >
-              This page is the public media connector layer. It can later be
-              upgraded with affiliate links, approved platform connectors,
-              featured releases, account-based media access, and business-managed
-              content routing from your admin area.
+              This page is the central media directory for SSGPT6 Core. Later,
+              it can connect to real video feeds, podcast players, newsletter
+              signup forms, media connectors, admin publishing workflows, and
+              automated content distribution.
             </p>
           </div>
         </section>
