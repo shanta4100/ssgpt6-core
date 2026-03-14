@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: `${baseUrl}/`,
+      url: `${baseUrl}`,
       lastModified: new Date(),
     },
     {
@@ -17,15 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
-      url: `${baseUrl}/dashboard`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/pricing`,
-      lastModified: new Date(),
-    },
-    {
       url: `${baseUrl}/tools`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/media`,
       lastModified: new Date(),
     },
     {
@@ -45,10 +41,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
-      url: `${baseUrl}/media`,
-      lastModified: new Date(),
-    },
-    {
       url: `${baseUrl}/webinar`,
       lastModified: new Date(),
     },
@@ -57,7 +49,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: `${baseUrl}/pricing`,
+      lastModified: new Date(),
+    },
+    {
       url: `${baseUrl}/admin`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/dashboard`,
       lastModified: new Date(),
     },
   ];
