@@ -26,6 +26,16 @@ export default function BlogsPage() {
     border: "1px solid #d6e2f2",
   } as const;
 
+  const button = {
+    display: "inline-block",
+    padding: "12px 18px",
+    borderRadius: "12px",
+    backgroundColor: "#0b1f3a",
+    color: "#ffffff",
+    textDecoration: "none",
+    fontWeight: 700,
+  } as const;
+
   return (
     <>
       <main
@@ -56,7 +66,7 @@ export default function BlogsPage() {
             >
               <div>
                 <h1 style={{ fontSize: "32px", margin: 0, fontWeight: 800 }}>
-                  SSGPT6 Core Media
+                  SSGPT6 Core
                 </h1>
                 <p
                   style={{
@@ -66,7 +76,7 @@ export default function BlogsPage() {
                     fontSize: "18px",
                   }}
                 >
-                  Blogs
+                  Blog Library
                 </p>
               </div>
 
@@ -79,9 +89,9 @@ export default function BlogsPage() {
                 }}
               >
                 <a href="/" style={navLink}>Home</a>
+                <a href="/media" style={navLink}>Media</a>
                 <a href="/videos" style={navLink}>Videos</a>
                 <a href="/blogs" style={activeNav}>Blogs</a>
-                <a href="/podcast" style={navLink}>Podcast</a>
                 <a href="/pricing" style={navLink}>Pricing</a>
                 <a href="/dashboard" style={navLink}>Dashboard</a>
               </nav>
@@ -96,7 +106,7 @@ export default function BlogsPage() {
                 letterSpacing: "-1px",
               }}
             >
-              Blog Library
+              Blog library
             </h2>
 
             <p
@@ -105,71 +115,71 @@ export default function BlogsPage() {
                 fontSize: "20px",
                 lineHeight: "1.8",
                 color: "#d9e4f5",
-                maxWidth: "820px",
+                maxWidth: "860px",
               }}
             >
-              Explore articles, founder editorials, AI platform insights, media
-              releases, technology updates, and knowledge-driven content from
-              SSGPT6 Core.
+              Read founder editorials, company insights, platform updates,
+              thought leadership posts, media commentary, and future knowledge
+              publishing across SSGPT6 Core.
             </p>
           </div>
 
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
               gap: "20px",
             }}
           >
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
                 Founder Editorial
               </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Founder reflections, long-term vision, platform strategy, and
-                public thought leadership.
+                Personal vision, direction, strategic thinking, and long-form
+                commentary from the founder side of the platform.
               </p>
-              <a href="#" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-                Read Articles →
+              <a href="/about" style={button}>
+                Read More
               </a>
             </div>
 
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                AI Automation
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Company Updates
               </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Articles on automation systems, intelligent workflows, media
-                production logic, and future AI tooling.
+                Articles covering platform milestones, public announcements, and
+                progress updates.
               </p>
-              <a href="#" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-                Read Articles →
+              <a href="/releases" style={button}>
+                View Updates
               </a>
             </div>
 
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Media & Releases
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Media Insights
               </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Blog-style coverage of updates, company releases, public platform
-                messaging, and media highlights.
+                Posts connected to content systems, media production, publishing
+                workflow, and audience growth.
               </p>
-              <a href="#" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-                Read Articles →
+              <a href="/media" style={button}>
+                Open Media
               </a>
             </div>
 
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
                 Future Systems
               </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Discussions about platform expansion, zero-carbon innovation,
-                infrastructure ideas, and future digital systems.
+                Articles about AI automation, sleeping-agent workflows,
+                intelligent tools, and next-generation digital operations.
               </p>
-              <a href="#" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-                Read Articles →
+              <a href="/tools" style={button}>
+                Open Tools
               </a>
             </div>
           </div>
@@ -183,7 +193,7 @@ export default function BlogsPage() {
                 fontSize: "30px",
               }}
             >
-              Blog Publishing Notes
+              Blog publishing note
             </h3>
             <p
               style={{
@@ -193,10 +203,9 @@ export default function BlogsPage() {
                 marginBottom: 0,
               }}
             >
-              This page can later be upgraded into a real blog system with article
-              cards, categories, search, featured posts, newsletters, and media
-              releases. For now, it acts as the structured blog hub for SSGPT6
-              Core Media.
+              This page is ready to become a full blog hub later with categories,
+              post archives, featured articles, author sections, and structured
+              publishing workflows managed from your platform.
             </p>
           </div>
         </section>
