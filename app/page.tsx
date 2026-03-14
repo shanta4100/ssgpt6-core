@@ -57,23 +57,78 @@ export default function HomePage() {
             <nav
               style={{
                 display: "flex",
-                gap: "18px",
+                gap: "10px",
                 flexWrap: "wrap",
+                alignItems: "center",
               }}
             >
-              <a href="/" style={{ color: "#ffffff", textDecoration: "none" }}>
+              <a
+                href="/"
+                style={{
+                  color: "#ffffff",
+                  textDecoration: "none",
+                  padding: "10px 14px",
+                  borderRadius: "12px",
+                  backgroundColor: "transparent",
+                  fontWeight: 600,
+                }}
+              >
                 Home
               </a>
-              <a href="/tools" style={{ color: "#ffffff", textDecoration: "none" }}>
+
+              <a
+                href="/tools"
+                style={{
+                  color: "#0b1f3a",
+                  textDecoration: "none",
+                  padding: "10px 16px",
+                  borderRadius: "12px",
+                  backgroundColor: "#c9a227",
+                  fontWeight: 700,
+                }}
+              >
                 Tools
               </a>
-              <a href="/about" style={{ color: "#ffffff", textDecoration: "none" }}>
+
+              <a
+                href="/about"
+                style={{
+                  color: "#ffffff",
+                  textDecoration: "none",
+                  padding: "10px 14px",
+                  borderRadius: "12px",
+                  backgroundColor: "transparent",
+                  fontWeight: 600,
+                }}
+              >
                 About
               </a>
-              <a href="/contact" style={{ color: "#ffffff", textDecoration: "none" }}>
+
+              <a
+                href="/contact"
+                style={{
+                  color: "#ffffff",
+                  textDecoration: "none",
+                  padding: "10px 14px",
+                  borderRadius: "12px",
+                  backgroundColor: "transparent",
+                  fontWeight: 600,
+                }}
+              >
                 Contact
               </a>
-              <a href="/dashboard" style={{ color: "#ffffff", textDecoration: "none" }}>
+
+              <a
+                href="/dashboard"
+                style={{
+                  color: "#ffffff",
+                  textDecoration: "none",
+                  padding: "10px 14px",
+                  borderRadius: "12px",
+                  backgroundColor: "transparent",
+                  fontWeight: 600,
+                }}
+              >
                 Dashboard
               </a>
             </nav>
