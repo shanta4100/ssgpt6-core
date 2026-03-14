@@ -66,7 +66,7 @@ export default function NewsletterPage() {
             >
               <div>
                 <h1 style={{ fontSize: "32px", margin: 0, fontWeight: 800 }}>
-                  SSGPT6 Core Media
+                  SSGPT6 Core
                 </h1>
                 <p
                   style={{
@@ -89,10 +89,10 @@ export default function NewsletterPage() {
                 }}
               >
                 <a href="/" style={navLink}>Home</a>
+                <a href="/media" style={navLink}>Media</a>
                 <a href="/videos" style={navLink}>Videos</a>
                 <a href="/blogs" style={navLink}>Blogs</a>
                 <a href="/newsletter" style={activeNav}>Newsletter</a>
-                <a href="/media" style={navLink}>Media</a>
                 <a href="/dashboard" style={navLink}>Dashboard</a>
               </nav>
             </div>
@@ -106,7 +106,7 @@ export default function NewsletterPage() {
                 letterSpacing: "-1px",
               }}
             >
-              Newsletter Hub
+              Newsletter hub
             </h2>
 
             <p
@@ -115,16 +115,16 @@ export default function NewsletterPage() {
                 fontSize: "20px",
                 lineHeight: "1.8",
                 color: "#d9e4f5",
-                maxWidth: "840px",
+                maxWidth: "860px",
               }}
             >
-              Publish regular updates, founder messages, company notes, media
-              summaries, featured content, and platform highlights in one clean
-              newsletter space.
+              Publish recurring updates, subscriber communication, platform
+              notices, company summaries, featured announcements, and future
+              automated mailing workflows from one central newsletter space.
             </p>
           </div>
 
-          <div style={card}>
+          <div style={{ ...card, marginBottom: "24px" }}>
             <h3
               style={{
                 marginTop: 0,
@@ -133,7 +133,7 @@ export default function NewsletterPage() {
                 fontSize: "30px",
               }}
             >
-              Featured Newsletter
+              Featured newsletter
             </h3>
 
             <p
@@ -144,8 +144,8 @@ export default function NewsletterPage() {
                 marginBottom: "18px",
               }}
             >
-              This section can be used for your latest public update, featured
-              announcement, or weekly SSGPT6 Core media summary.
+              Use this area for your weekly platform brief, founder update,
+              subscriber note, or media summary.
             </p>
 
             <div
@@ -164,7 +164,7 @@ export default function NewsletterPage() {
                   fontSize: "24px",
                 }}
               >
-                Weekly Platform Brief
+                Weekly platform brief
               </h4>
               <p
                 style={{
@@ -175,8 +175,8 @@ export default function NewsletterPage() {
                   fontSize: "16px",
                 }}
               >
-                Use this area for your latest weekly message, new release
-                highlights, media update, or company communication.
+                Highlight new releases, current media, upcoming webinars,
+                founder notes, or public announcements here.
               </p>
             </div>
           </div>
@@ -186,39 +186,45 @@ export default function NewsletterPage() {
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
               gap: "20px",
-              marginTop: "24px",
             }}
           >
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Weekly Updates</h3>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Weekly Updates
+              </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Send regular updates to your audience with featured media,
-                product notes, and founder insights.
+                Send routine platform news, feature highlights, and important
+                public updates.
               </p>
+              <a href="/blogs" style={button}>
+                Open Blogs
+              </a>
             </div>
 
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Release Notes</h3>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Company Summary
+              </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Share recent changes, platform launches, business notices, and
-                media publication summaries.
+                Share official business notes, announcements, and public-facing
+                summaries.
               </p>
+              <a href="/releases" style={button}>
+                Open Releases
+              </a>
             </div>
 
             <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Audience Mailing</h3>
+              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "26px" }}>
+                Media Campaigns
+              </h3>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Organize subscriber-facing communication for your growing public
-                audience and business readers.
+                Support content campaigns, product messaging, and future audience
+                growth operations.
               </p>
-            </div>
-
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Automation Ready</h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                This area can later connect with automatic newsletter workflows,
-                scheduled distribution, and publishing logic.
-              </p>
+              <a href="/media" style={button}>
+                Open Media
+              </a>
             </div>
           </div>
 
@@ -231,29 +237,20 @@ export default function NewsletterPage() {
                 fontSize: "30px",
               }}
             >
-              Newsletter Operations
+              Newsletter note
             </h3>
             <p
               style={{
                 color: "#4b5563",
                 fontSize: "17px",
                 lineHeight: "1.8",
-                marginBottom: "18px",
+                marginBottom: 0,
               }}
             >
-              This page can later be upgraded into a full mailing and publishing
-              center with subscriber forms, archive issues, campaign controls,
-              automation schedules, and audience segmentation.
+              This page can later connect to real subscriber forms, issue
+              archives, audience segmentation, scheduled campaigns, and
+              admin-controlled newsletter publishing tools.
             </p>
-
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <a href="/media" style={button}>
-                Open Media Page
-              </a>
-              <a href="/blogs" style={button}>
-                Open Blogs
-              </a>
-            </div>
           </div>
         </section>
       </main>
