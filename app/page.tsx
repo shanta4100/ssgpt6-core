@@ -1,6 +1,3 @@
-import Image from "next/image";
-import heroLogo from "../public/IMG_6460.png";
-
 export default function HomePage() {
   const navLink = {
     color: "#ffffff",
@@ -47,6 +44,20 @@ export default function HomePage() {
     border: "1px solid #d6e2f2",
   } as const;
 
+  const sectionTitle = {
+    marginTop: 0,
+    marginBottom: "14px",
+    color: "#0b1f3a",
+    fontSize: "28px",
+  } as const;
+
+  const cardText = {
+    color: "#42546b",
+    fontSize: "17px",
+    lineHeight: "1.8",
+    marginBottom: "18px",
+  } as const;
+
   return (
     <main
       style={{
@@ -58,7 +69,7 @@ export default function HomePage() {
     >
       <section
         style={{
-          maxWidth: "1150px",
+          maxWidth: "1180px",
           margin: "0 auto",
           padding: "40px 20px 80px",
         }}
@@ -88,7 +99,7 @@ export default function HomePage() {
                   fontWeight: 800,
                 }}
               >
-                SSGPT6 Core
+                SSGPT6 Core Media
               </h1>
               <p
                 style={{
@@ -98,7 +109,7 @@ export default function HomePage() {
                   fontSize: "18px",
                 }}
               >
-                Intelligent Digital Access Platform
+                Intelligent Digital Access Platform · GNAIAAAC LLC
               </p>
             </div>
 
@@ -111,9 +122,10 @@ export default function HomePage() {
               }}
             >
               <a href="/" style={activeNav}>Home</a>
-              <a href="/tools" style={navLink}>Tools</a>
-              <a href="/about" style={navLink}>About</a>
-              <a href="/contact" style={navLink}>Contact</a>
+              <a href="/videos" style={navLink}>Videos</a>
+              <a href="/blogs" style={navLink}>Blogs</a>
+              <a href="/podcast" style={navLink}>Podcast</a>
+              <a href="/newsletter" style={navLink}>Newsletter</a>
               <a href="/dashboard" style={navLink}>Dashboard</a>
             </nav>
           </div>
@@ -129,18 +141,18 @@ export default function HomePage() {
             <div>
               <h2
                 style={{
-                  fontSize: "62px",
+                  fontSize: "58px",
                   lineHeight: "1.02",
                   margin: 0,
                   fontWeight: 800,
                   letterSpacing: "-1px",
                 }}
               >
-                Cosmic AI.
+                AI Media.
                 <br />
-                Secure Network.
+                Automated Production.
                 <br />
-                Human-Centered Future.
+                Human-Centered Broadcast.
               </h2>
 
               <p
@@ -152,11 +164,11 @@ export default function HomePage() {
                   maxWidth: "760px",
                 }}
               >
-                SSGPT6 Core is a founder-led digital platform for AI automation,
-                secure infrastructure, cloud visibility, intelligent system
-                control, and future-ready ecosystem services. Built under
-                GNAIAAAC LLC, it connects technology, wellbeing, environment,
-                and human-centered progress through a unified intelligent core.
+                SSGPT6 Core is evolving into a media and intelligence company
+                platform built for podcasting, blogs, newsletters, webinars,
+                company releases, video production, and a future-ready content
+                engine powered by automated AI systems, sleeping-agent workflow
+                logic, and self-operated production support.
               </p>
 
               <div
@@ -171,28 +183,68 @@ export default function HomePage() {
                   Open Dashboard
                 </a>
 
-                <a href="/tools" style={whiteButton}>
-                  View Tools
+                <a href="#featured-video" style={whiteButton}>
+                  Watch Featured Video
                 </a>
               </div>
             </div>
 
             <div>
-              <Image
-                src={heroLogo}
+              <img
+                src="/IMG_6460.png"
                 alt="SSGPT6 Core Hero Logo"
                 style={{
                   width: "100%",
-                  height: "auto",
                   borderRadius: "24px",
                   boxShadow: "0 18px 40px rgba(0,0,0,0.28)",
                   border: "1px solid rgba(255,255,255,0.12)",
                   display: "block",
                 }}
-                priority
               />
             </div>
           </div>
+        </div>
+
+        <div
+          id="featured-video"
+          style={{
+            ...card,
+            marginBottom: "24px",
+          }}
+        >
+          <h3 style={sectionTitle}>Featured Video</h3>
+          <p style={cardText}>
+            This homepage area is reserved for your primary media program. Use
+            it for anchor-led presentations, AI-generated news updates, product
+            walkthroughs, media announcements, or your core video creator
+            project output.
+          </p>
+
+          <video
+            controls
+            playsInline
+            style={{
+              width: "100%",
+              borderRadius: "18px",
+              backgroundColor: "#0b1f3a",
+              boxShadow: "0 10px 24px rgba(11, 31, 58, 0.15)",
+            }}
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
+
+          <p
+            style={{
+              marginTop: "16px",
+              marginBottom: 0,
+              color: "#42546b",
+              fontSize: "16px",
+              lineHeight: "1.7",
+            }}
+          >
+            Upload your running homepage program as:
+            <strong> public/hero-video.mp4</strong>
+          </p>
         </div>
 
         <div
@@ -200,60 +252,132 @@ export default function HomePage() {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
             gap: "20px",
-            marginTop: "10px",
           }}
         >
           <div style={card}>
-            <h3 style={{ marginTop: 0, marginBottom: "14px", color: "#0b1f3a", fontSize: "28px" }}>
-              Tools
-            </h3>
-            <p style={{ color: "#42546b", fontSize: "17px", lineHeight: "1.8", marginBottom: "18px" }}>
-              View the core systems that support automation, infrastructure,
-              monitoring, and intelligent platform growth.
+            <h3 style={sectionTitle}>Podcast</h3>
+            <p style={cardText}>
+              Audio programs, interviews, founder messages, AI commentary, and
+              recurring thought leadership episodes.
             </p>
-            <a href="/tools" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-              Go to Tools →
+            <a href="/podcast" style={{ color: "#0b1f3a", fontWeight: 700 }}>
+              Go to Podcast →
             </a>
           </div>
 
           <div style={card}>
-            <h3 style={{ marginTop: 0, marginBottom: "14px", color: "#0b1f3a", fontSize: "28px" }}>
-              About
-            </h3>
-            <p style={{ color: "#42546b", fontSize: "17px", lineHeight: "1.8", marginBottom: "18px" }}>
-              Learn the mission, vision, founder identity, and long-term system
-              direction of SSGPT6 Core.
+            <h3 style={sectionTitle}>Blogs</h3>
+            <p style={cardText}>
+              Editorial content, technical articles, product stories, founder
+              insights, and platform writing.
             </p>
-            <a href="/about" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-              Go to About →
+            <a href="/blogs" style={{ color: "#0b1f3a", fontWeight: 700 }}>
+              Go to Blogs →
             </a>
           </div>
 
           <div style={card}>
-            <h3 style={{ marginTop: 0, marginBottom: "14px", color: "#0b1f3a", fontSize: "28px" }}>
-              Contact
-            </h3>
-            <p style={{ color: "#42546b", fontSize: "17px", lineHeight: "1.8", marginBottom: "18px" }}>
-              Reach the platform for support, business coordination, and future
-              collaboration under GNAIAAAC LLC.
+            <h3 style={sectionTitle}>Newsletter</h3>
+            <p style={cardText}>
+              Scheduled updates, platform highlights, company signals, and
+              audience-facing recurring communication.
             </p>
-            <a href="/contact" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-              Go to Contact →
+            <a href="/newsletter" style={{ color: "#0b1f3a", fontWeight: 700 }}>
+              Go to Newsletter →
             </a>
           </div>
 
           <div style={card}>
-            <h3 style={{ marginTop: 0, marginBottom: "14px", color: "#0b1f3a", fontSize: "28px" }}>
-              Dashboard
-            </h3>
-            <p style={{ color: "#42546b", fontSize: "17px", lineHeight: "1.8", marginBottom: "18px" }}>
-              Open the founder-facing command layer for visibility, structure,
-              and future platform control.
+            <h3 style={sectionTitle}>Media</h3>
+            <p style={cardText}>
+              Public-facing media center for featured content, brand assets,
+              spotlight content, and platform storytelling.
+            </p>
+            <a href="/media" style={{ color: "#0b1f3a", fontWeight: 700 }}>
+              Go to Media →
+            </a>
+          </div>
+
+          <div style={card}>
+            <h3 style={sectionTitle}>Webinar</h3>
+            <p style={cardText}>
+              Live sessions, training broadcasts, educational streams, recorded
+              classes, and event programming.
+            </p>
+            <a href="/webinar" style={{ color: "#0b1f3a", fontWeight: 700 }}>
+              Go to Webinar →
+            </a>
+          </div>
+
+          <div style={card}>
+            <h3 style={sectionTitle}>Company Releases</h3>
+            <p style={cardText}>
+              Official company updates, launch notes, release statements,
+              business milestones, and public notices.
+            </p>
+            <a href="/releases" style={{ color: "#0b1f3a", fontWeight: 700 }}>
+              Go to Releases →
+            </a>
+          </div>
+
+          <div style={card}>
+            <h3 style={sectionTitle}>Video Library</h3>
+            <p style={cardText}>
+              Organized archive of videos, AI-generated productions, studio
+              assets, explainers, and media episodes.
+            </p>
+            <a href="/videos" style={{ color: "#0b1f3a", fontWeight: 700 }}>
+              Go to Videos →
+            </a>
+          </div>
+
+          <div style={card}>
+            <h3 style={sectionTitle}>Automation Studio</h3>
+            <p style={cardText}>
+              Future home for script generation, content planning, scheduling,
+              program switching, and self-operated media workflows.
             </p>
             <a href="/dashboard" style={{ color: "#0b1f3a", fontWeight: 700 }}>
-              Go to Dashboard →
+              Open Studio →
             </a>
           </div>
+        </div>
+
+        <div
+          style={{
+            marginTop: "24px",
+            ...card,
+          }}
+        >
+          <h3 style={{ ...sectionTitle, fontSize: "30px" }}>Production Vision</h3>
+          <p
+            style={{
+              color: "#42546b",
+              fontSize: "18px",
+              lineHeight: "1.9",
+              marginTop: 0,
+              marginBottom: "12px",
+            }}
+          >
+            The SSGPT6 Core media system is intended to support a professional
+            AI-assisted content company model where production can expand from
+            static pages into smart publishing, recurring programs, automated
+            content generation, anchor-style presentation layers, and organized
+            media operations.
+          </p>
+          <p
+            style={{
+              color: "#42546b",
+              fontSize: "18px",
+              lineHeight: "1.9",
+              marginTop: 0,
+              marginBottom: 0,
+            }}
+          >
+            Over time, this homepage can act as the command center for media,
+            podcasting, newsletters, videos, webinar programming, business
+            releases, and future self-managed content workflows.
+          </p>
         </div>
       </section>
     </main>
