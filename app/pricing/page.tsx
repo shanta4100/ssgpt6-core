@@ -1,6 +1,6 @@
 export default function PricingPage() {
   const links = {
-    mainCheckout: "/contact",
+    mainCheckout: "/thank-you",
     stripe: "/contact",
     paypal: "/contact",
     applePay: "/contact",
