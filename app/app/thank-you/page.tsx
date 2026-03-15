@@ -13,7 +13,7 @@ export default function ThankYouPage() {
 
     const utterance = new SpeechSynthesisUtterance(thankYouMessage);
     utterance.rate = 0.95;
-    utterance.pitch = 1.1;
+    utterance.pitch = 1.05;
     utterance.volume = 1;
 
     const voices = window.speechSynthesis.getVoices();
@@ -28,9 +28,7 @@ export default function ThankYouPage() {
   }
 
   useEffect(() => {
-    if (autoVoice) {
-      speakMessage();
-    }
+    if (autoVoice) speakMessage();
   }, [autoVoice]);
 
   return (
@@ -50,14 +48,14 @@ export default function ThankYouPage() {
               <h2 style={h2}>A Warm Thank You</h2>
               <p style={messageText}>
                 Thank you for your purchase. GNAIAAAC LLC appreciates your trust,
-                your service, and your support. We are grateful to welcome you.
+                your support, and your service.
               </p>
               <p style={messageText}>
-                Your order helps support our work, our technology direction, and
-                our commitment to building thoughtful services with care and respect.
+                We are grateful to welcome you and pleased to serve you with care,
+                professionalism, and respect.
               </p>
               <p style={messageText}>
-                We hope your experience feels warm, professional, and memorable.
+                We hope your experience feels beautiful, smooth, and memorable.
               </p>
             </div>
 
@@ -65,7 +63,7 @@ export default function ThankYouPage() {
               <div style={avatarCircle}>Lady Avatar</div>
               <h3 style={{ marginBottom: "10px" }}>Greeting Anchor</h3>
               <p style={messageText}>
-                A graceful thank-you presentation area for a future nice lady avatar,
+                A graceful thank-you presentation area for a future lady avatar,
                 greeting animation, or anchored customer welcome.
               </p>
             </div>
@@ -87,20 +85,9 @@ export default function ThankYouPage() {
           <div style={{ marginTop: "16px" }}>
             <p style={voicePrompt}>Suggested voice greeting text:</p>
             <div style={voiceBox}>
-              “Thank you for your purchase. GNAIAAAC LLC appreciates your support and service.”
+              Thank you for your purchase. GNAIAAAC LLC appreciates your support and service.
             </div>
           </div>
-        </section>
-
-        <section style={mainCard}>
-          <h2 style={h2}>Customer Care Message</h2>
-          <p style={messageText}>
-            Thank you for choosing us. We deeply appreciate your purchase and your trust.
-            Your support means a great deal to GNAIAAAC LLC, and we are pleased to serve you.
-          </p>
-          <p style={messageText}>
-            We hope your journey with us is smooth, beautiful, and rewarding.
-          </p>
         </section>
 
         <section style={buttonRow}>
