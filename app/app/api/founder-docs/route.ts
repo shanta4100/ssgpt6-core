@@ -1,40 +1,33 @@
 import { NextResponse } from "next/server";
-
-type FounderDoc = {
-  id: number;
-  title: string;
-  category: string;
-  content: string;
-  created_at: string;
-};
-
-function getDB() {
-  const db = (globalThis as any).process?.env?.DB;
-  return db;
-}
+import { db } from "@/lib/firebase";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  orderBy,
+  query,
+  serverTimestamp,
+} from "firebase/firestore";
 
 export async function GET() {
   try {
-    const db = getDB();
+    const q = query(collection(db, "founder_docs"), orderBy("createdAt", "desc"));
+    const snapshot = await getDocs(q);
 
-    if (!db) {
-      return NextResponse.json(
-        { ok: false, message: "Database connection not available." },
-        { status: 500 }
-      );
-    }
-
-    const result = await db
-      .prepare(
-        `SELECT id, title, category, content, created_at
-         FROM founder_docs
-         ORDER BY id DESC`
-      )
-      .all();
+    const items = snapshot.docs.map((doc) => {
+      const data = doc.data();
+      return {
+        id: doc.id,
+        title: data.title || "",
+        category: data.category || "",
+        content: data.content || "",
+        createdAt: data.createdAt?.toDate?.().toISOString?.() || "",
+      };
+    });
 
     return NextResponse.json({
       ok: true,
-      items: (result.results || []) as FounderDoc[],
+      items,
     });
   } catch {
     return NextResponse.json(
@@ -59,22 +52,12 @@ export async function POST(req: Request) {
       );
     }
 
-    const db = getDB();
-
-    if (!db) {
-      return NextResponse.json(
-        { ok: false, message: "Database connection not available." },
-        { status: 500 }
-      );
-    }
-
-    await db
-      .prepare(
-        `INSERT INTO founder_docs (title, category, content)
-         VALUES (?, ?, ?)`
-      )
-      .bind(title, category, content)
-      .run();
+    await addDoc(collection(db, "founder_docs"), {
+      title,
+      category,
+      content,
+      createdAt: serverTimestamp(),
+    });
 
     return NextResponse.json({
       ok: true,
