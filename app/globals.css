@@ -139,6 +139,12 @@
   gap: 12px;
 }
 
+.newsletter-message {
+  margin-top: 10px;
+  color: #ffd67a;
+  font-weight: 700;
+}
+
 @media (max-width: 640px) {
   .media-hero h1 {
     font-size: 32px;
