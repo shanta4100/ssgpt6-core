@@ -1,126 +1,200 @@
-import Footer from "../footer";
+"use client";
+
+import { FormEvent, useState } from "react";
 
 export default function NewsletterPage() {
-  const card = {
-    backgroundColor: "#ffffff",
-    borderRadius: "22px",
-    padding: "24px",
-    boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-    border: "1px solid #d6e2f2",
-  } as const;
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const button = {
-    display: "inline-block",
-    padding: "12px 18px",
-    borderRadius: "12px",
-    backgroundColor: "#c9a227",
-    color: "#0b1f3a",
-    textDecoration: "none",
-    fontWeight: 700,
-  } as const;
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setMessage("");
 
-  const inputStyle = {
-    width: "100%",
-    padding: "14px 16px",
-    borderRadius: "12px",
-    border: "1px solid #cbd5e1",
-    fontSize: "16px",
-    outline: "none",
-    boxSizing: "border-box" as const,
-  };
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setMessage(data.message || "Subscription failed.");
+        setLoading(false);
+        return;
+      }
+
+      setMessage(data.message || "Subscribed successfully.");
+      setName("");
+      setEmail("");
+    } catch {
+      setMessage("Network error. Please try again.");
+    }
+
+    setLoading(false);
+  }
 
   return (
-    <>
-      <main
+    <main
+      style={{
+        minHeight: "100vh",
+        background: "linear-gradient(180deg, #06111f 0%, #0c1c2f 100%)",
+        color: "#ffffff",
+        padding: "48px 20px",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <div
         style={{
-          minHeight: "100vh",
-          background: "#f4f7fb",
-          fontFamily: "Arial, sans-serif",
+          maxWidth: "760px",
+          margin: "0 auto",
+          background: "rgba(255,255,255,0.06)",
+          border: "1px solid rgba(153,204,255,0.22)",
+          borderRadius: "18px",
+          padding: "32px",
+          boxShadow: "0 0 24px rgba(0,140,255,0.08)",
         }}
       >
-        <section
+        <p
           style={{
-            maxWidth: "1120px",
-            margin: "0 auto",
-            padding: "40px 20px 80px",
+            color: "#9cc9ff",
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            marginBottom: "10px",
           }}
         >
-          <div
+          GNAIAAAC LLC • Powered by SSGPT6-CORE
+        </p>
+
+        <h1 style={{ marginTop: 0, marginBottom: "12px" }}>Newsletter Signup</h1>
+
+        <p style={{ color: "#dbe7ff", lineHeight: 1.7 }}>
+          Subscribe for updates, platform news, project releases, media posts,
+          and future service announcements.
+        </p>
+
+        <form
+          onSubmit={handleSubmit}
+          style={{
+            display: "grid",
+            gap: "12px",
+            marginTop: "20px",
+          }}
+        >
+          <label htmlFor="newsletter-name" style={{ fontWeight: 700 }}>
+            Full Name
+          </label>
+          <input
+            id="newsletter-name"
+            type="text"
+            placeholder="Your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             style={{
-              background: "linear-gradient(135deg, #081a36, #0b2347)",
+              padding: "12px 14px",
+              borderRadius: "12px",
+              border: "1px solid rgba(153,204,255,0.25)",
+              background: "rgba(255,255,255,0.08)",
               color: "#ffffff",
-              borderRadius: "28px",
-              padding: "32px",
-              marginBottom: "24px",
+              outline: "none",
             }}
-          >
-            <h1 style={{ margin: 0, fontSize: "42px" }}>Newsletter</h1>
-            <p style={{ marginTop: "12px", lineHeight: "1.8", color: "#d9e4f5" }}>
-              Subscriber communication, platform updates, founder notes, announcements,
-              and recurring SSGPT6 Core publishing.
-            </p>
-            <a href="/media" style={button}>Back to Media Hub</a>
-          </div>
+          />
 
-          <div
+          <label htmlFor="newsletter-email" style={{ fontWeight: 700 }}>
+            Email Address
+          </label>
+          <input
+            id="newsletter-email"
+            type="email"
+            placeholder="your@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-              gap: "20px",
+              padding: "12px 14px",
+              borderRadius: "12px",
+              border: "1px solid rgba(153,204,255,0.25)",
+              background: "rgba(255,255,255,0.08)",
+              color: "#ffffff",
+              outline: "none",
+            }}
+          />
+
+          <button
+            type="submit"
+            disabled={loading}
+            style={{
+              display: "inline-block",
+              border: "none",
+              cursor: "pointer",
+              borderRadius: "999px",
+              padding: "12px 18px",
+              background: "linear-gradient(90deg, #1f7fff, #53b3ff)",
+              color: "#ffffff",
+              fontWeight: 700,
+              marginTop: "8px",
             }}
           >
-            <div style={card}>
-              <h2 style={{ marginTop: 0, color: "#0b1f3a" }}>Subscribe</h2>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                This is the newsletter signup section. Later it can connect to a real
-                email system, subscriber database, or automated campaign workflow.
-              </p>
+            {loading ? "Submitting..." : "Subscribe"}
+          </button>
 
-              <div style={{ display: "grid", gap: "14px" }}>
-                <input type="text" placeholder="Full name" style={inputStyle} />
-                <input type="email" placeholder="Email address" style={inputStyle} />
-                <button
-                  style={{
-                    ...button,
-                    border: "none",
-                    cursor: "pointer",
-                  }}
-                >
-                  Join Newsletter
-                </button>
-              </div>
-            </div>
-
-            <div style={card}>
-              <h2 style={{ marginTop: 0, color: "#0b1f3a" }}>Newsletter Topics</h2>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Subscribers can later receive founder updates, product announcements,
-                blog highlights, webinar notices, company releases, and media updates.
-              </p>
-              <ul style={{ color: "#4b5563", lineHeight: "1.9", paddingLeft: "20px", marginBottom: 0 }}>
-                <li>Founder messages</li>
-                <li>Platform updates</li>
-                <li>Blog and article highlights</li>
-                <li>Webinar and event notices</li>
-                <li>Company releases</li>
-                <li>Media and video updates</li>
-              </ul>
-            </div>
-          </div>
-
-          <div style={{ ...card, marginTop: "24px" }}>
-            <h2 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "30px" }}>
-              Newsletter note
-            </h2>
-            <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-              Right now this page is a professional front-end structure. Later it can
-              connect to a real email provider, admin publishing tools, audience lists,
-              and automated newsletter delivery systems.
+          {message ? (
+            <p
+              style={{
+                marginTop: "10px",
+                color: "#ffd67a",
+                fontWeight: 700,
+              }}
+            >
+              {message}
             </p>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+          ) : null}
+        </form>
+
+        <div
+          style={{
+            marginTop: "24px",
+            display: "flex",
+            gap: "12px",
+            flexWrap: "wrap",
+          }}
+        >
+          <a
+            href="/"
+            style={{
+              display: "inline-block",
+              padding: "12px 18px",
+              borderRadius: "999px",
+              background: "rgba(255,255,255,0.08)",
+              color: "#ffffff",
+              textDecoration: "none",
+              border: "1px solid rgba(153,204,255,0.25)",
+            }}
+          >
+            Back to Home
+          </a>
+
+          <a
+            href="/media"
+            style={{
+              display: "inline-block",
+              padding: "12px 18px",
+              borderRadius: "999px",
+              background: "rgba(255,255,255,0.08)",
+              color: "#ffffff",
+              textDecoration: "none",
+              border: "1px solid rgba(153,204,255,0.25)",
+            }}
+          >
+            Media Center
+          </a>
+        </div>
+      </div>
+    </main>
   );
 }
