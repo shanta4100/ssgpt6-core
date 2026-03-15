@@ -1,236 +1,164 @@
-import Footer from "../footer";
-
 export default function PricingPage() {
-  const card = {
-    backgroundColor: "#ffffff",
-    borderRadius: "22px",
-    padding: "26px",
-    boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-    border: "1px solid #d6e2f2",
-  } as const;
-
-  const smallCard = {
-    backgroundColor: "#ffffff",
-    borderRadius: "18px",
-    padding: "22px",
-    boxShadow: "0 10px 24px rgba(11, 31, 58, 0.08)",
-    border: "1px solid #d6e2f2",
-  } as const;
-
-  const button = {
-    display: "inline-block",
-    padding: "12px 18px",
-    borderRadius: "12px",
-    backgroundColor: "#c9a227",
-    color: "#0b1f3a",
-    textDecoration: "none",
-    fontWeight: 700,
-  } as const;
-
   return (
-    <>
-      <main
-        style={{
-          minHeight: "100vh",
-          background: "#f4f7fb",
-          fontFamily: "Arial, sans-serif",
-        }}
-      >
-        <section
-          style={{
-            maxWidth: "1120px",
-            margin: "0 auto",
-            padding: "40px 20px 80px",
-          }}
-        >
-          <div
-            style={{
-              background: "linear-gradient(135deg, #081a36, #0b2347)",
-              color: "#ffffff",
-              borderRadius: "28px",
-              padding: "32px",
-              marginBottom: "24px",
-            }}
-          >
-            <h1 style={{ margin: 0, fontSize: "42px" }}>Pricing</h1>
-            <p style={{ marginTop: "12px", lineHeight: "1.8", color: "#d9e4f5" }}>
-              Affordable access for general users, creators, and future automation
-              subscribers inside SSGPT6 Core.
-            </p>
+    <section id="pricing-payment-board" className="ssgpt6-pricing-board">
+      <div className="container">
+        <div className="hero">
+          <p className="eyebrow">SSGPT6-CORE</p>
+          <h2>Secure Global Payment Board</h2>
+          <p className="subtitle">
+            Trusted checkout, premium access, global payment pathways, and structured tax-aware billing support.
+          </p>
+        </div>
+
+        <div className="pricing-grid">
+          <div className="card">
+            <h3>Free</h3>
+            <p className="price">$0</p>
+            <p>Public browsing and selected access</p>
+            <a href="#payment-cart" className="btn">Join Free</a>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "20px",
-              marginBottom: "30px",
-            }}
-          >
-            <div style={card}>
-              <h2 style={{ marginTop: 0, color: "#0b1f3a" }}>Free</h2>
-              <p style={{ fontSize: "34px", fontWeight: 800, margin: "8px 0", color: "#0b1f3a" }}>
-                $0
-              </p>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Public browsing access for selected pages, company information,
-                media overview, and general platform discovery.
-              </p>
-              <a href="/contact" style={button}>Get Started</a>
-            </div>
-
-            <div
-              style={{
-                ...card,
-                border: "2px solid #c9a227",
-              }}
-            >
-              <h2 style={{ marginTop: 0, color: "#0b1f3a" }}>Core Member</h2>
-              <p style={{ fontSize: "34px", fontWeight: 800, margin: "8px 0", color: "#0b1f3a" }}>
-                $5/mo
-              </p>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Low-cost member access for future creator tools, media features,
-                content services, and limited platform usage.
-              </p>
-              <a href="/contact" style={button}>Choose Core Member</a>
-            </div>
-
-            <div style={card}>
-              <h2 style={{ marginTop: 0, color: "#0b1f3a" }}>Admin / Founder</h2>
-              <p style={{ fontSize: "34px", fontWeight: 800, margin: "8px 0", color: "#0b1f3a" }}>
-                Internal
-              </p>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Reserved for founder control, publishing management, automation
-                systems, dashboard access, and internal operations.
-              </p>
-              <a href="/admin" style={button}>Open Admin</a>
-            </div>
+          <div className="card">
+            <h3>Core Member</h3>
+            <p className="price">$5<span>/month</span></p>
+            <p>Expanded member content and basic tools</p>
+            <a href="#payment-cart" className="btn">Choose Core</a>
           </div>
 
-          <div style={{ ...card, marginBottom: "24px" }}>
-            <h2 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "30px" }}>
-              What’s Included
-            </h2>
-            <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: "22px" }}>
-              SSGPT6 Core is more than one tool. It is a connected media and
-              automation platform. These services can be included across free,
-              member, and internal levels depending on access permissions.
-            </p>
-
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: "18px",
-              }}
-            >
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Podcast</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Audio content, featured episodes, interviews, and voice-based media access.
-                </p>
-              </div>
-
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Blogs</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Articles, editorial posts, founder notes, updates, and knowledge publishing.
-                </p>
-              </div>
-
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Newsletter</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Recurring announcements, subscriber communication, and digest content.
-                </p>
-              </div>
-
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Media Hub</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Central access point for content navigation, organization, and discovery.
-                </p>
-              </div>
-
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Webinar</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Educational sessions, live presentation access, and future virtual events.
-                </p>
-              </div>
-
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Company Releases</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Official updates, launch notes, statements, and platform communications.
-                </p>
-              </div>
-
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Video Library</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Featured videos, media playback, and future automated video publishing.
-                </p>
-              </div>
-
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Tools & Automation</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Future creator tools, automation systems, workflow control, and member features.
-                </p>
-              </div>
-            </div>
+          <div className="card">
+            <h3>Plus Member</h3>
+            <p className="price">$15<span>/month</span></p>
+            <p>Premium content, downloads, and broader access</p>
+            <a href="#payment-cart" className="btn">Choose Plus</a>
           </div>
 
-          <div style={card}>
-            <h2 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "30px" }}>
-              Future Add-Ons
-            </h2>
-            <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: "18px" }}>
-              These can be added later as premium options without changing the core pricing model.
-            </p>
+          <div className="card">
+            <h3>Pro Member</h3>
+            <p className="price">$29<span>/month</span></p>
+            <p>Advanced access for active users and creators</p>
+            <a href="#payment-cart" className="btn">Choose Pro</a>
+          </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: "18px",
-              }}
-            >
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Advanced Video Creation</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Automated video generation, branded production, and premium publishing workflows.
-                </p>
-              </div>
+          <div className="card">
+            <h3>Business Member</h3>
+            <p className="price">$79<span>/month</span></p>
+            <p>Business-focused access, strategy pathways, and automation-oriented support</p>
+            <a href="#payment-cart" className="btn">Choose Business</a>
+          </div>
+        </div>
 
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Premium Media Connectors</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Future integrations with external music, streaming, and content services.
-                </p>
-              </div>
+        <div className="packages-grid">
+          <div className="package-card">
+            <h3>Starter</h3>
+            <p className="price">$29</p>
+            <p>Basic service access and guided starting support</p>
+          </div>
 
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>Creator Workspace</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Expanded dashboards, upload workflows, scheduling, and content operations tools.
-                </p>
-              </div>
+          <div className="package-card">
+            <h3>Growth</h3>
+            <p className="price">$99</p>
+            <p>Expanded support and stronger growth direction</p>
+          </div>
 
-              <div style={smallCard}>
-                <h3 style={{ marginTop: 0, color: "#0b1f3a" }}>AI Sleeping Agent Controls</h3>
-                <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
-                  Future intelligent automation for publishing, monitoring, and platform orchestration.
-                </p>
-              </div>
+          <div className="package-card">
+            <h3>Premium</h3>
+            <p className="price">$249</p>
+            <p>Advanced support and premium service pathway</p>
+          </div>
+
+          <div className="package-card">
+            <h3>Custom / Enterprise</h3>
+            <p className="price">Contact Us</p>
+            <p>Tailored support for large-scale, institutional, or custom business needs</p>
+          </div>
+        </div>
+
+        <div className="payment-methods">
+          <h3>Supported Payment Methods</h3>
+          <div className="payment-buttons">
+            <a href="#stripe-checkout" className="pay-btn">Stripe Checkout</a>
+            <a href="#paypal-checkout" className="pay-btn">PayPal</a>
+            <a href="#apple-pay" className="pay-btn">Apple Pay</a>
+            <a href="#google-pay" className="pay-btn">Google Pay</a>
+            <a href="#pay-later" className="pay-btn">Pay Later</a>
+            <a href="#global-cards" className="pay-btn">Global Card Payments</a>
+          </div>
+          <p className="notice">
+            Available payment methods may vary depending on country, currency, bank, device compatibility, provider support, legal requirements, and risk review.
+          </p>
+        </div>
+
+        <div className="smart-access-grid">
+          <div className="smart-card">
+            <h3>Voice Checkout</h3>
+            <p>Tap the microphone and say:</p>
+            <ul>
+              <li>Open secure checkout</li>
+              <li>Open payment cart</li>
+              <li>Pay with Stripe</li>
+              <li>Pay with PayPal</li>
+              <li>Use Apple Pay</li>
+              <li>Use Google Pay</li>
+            </ul>
+          </div>
+
+          <div className="smart-card">
+            <h3>QR Payment Access</h3>
+            <p>Scan to open the official payment cart or checkout page.</p>
+            <div className="qr-box">QR CODE HERE</div>
+          </div>
+
+          <div className="smart-card">
+            <h3>Tax-Aware Billing</h3>
+            <p>Tax stored separately from revenue.</p>
+            <ul>
+              <li>Subtotal tracked separately</li>
+              <li>Tax tracked separately</li>
+              <li>Processor fee tracked separately</li>
+              <li>Refunds tracked separately</li>
+              <li>Net amount tracked separately</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="success-guidance">
+          <h3>Business Support and Growth Guidance</h3>
+          <div className="guidance-grid">
+            <div>
+              <h4>Strategy Support</h4>
+              <p>Structured support for growth direction and planning</p>
+            </div>
+            <div>
+              <h4>Automation Support</h4>
+              <p>Future-ready pathways for workflow and operational automation</p>
+            </div>
+            <div>
+              <h4>Technical Support</h4>
+              <p>Guidance for digital setup, support flow, and platform access</p>
+            </div>
+            <div>
+              <h4>Business Development</h4>
+              <p>Support pathways for long-term growth and premium service use</p>
             </div>
           </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+        </div>
+
+        <div id="payment-cart" className="cta-area">
+          <a href="#secure-checkout" className="primary-btn">Proceed to Secure Checkout</a>
+          <a href="#choose-payment-method" className="secondary-btn">Choose Payment Method</a>
+          <a href="#enterprise-sales" className="secondary-btn">Contact Enterprise Sales</a>
+        </div>
+
+        <div className="policy-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <span> • </span>
+          <a href="/refund-policy">Refund Policy</a>
+          <span> • </span>
+          <a href="/terms-of-use">Terms of Use</a>
+          <span> • </span>
+          <a href="/support-center">Support Center</a>
+        </div>
+      </div>
+    </section>
   );
 }
