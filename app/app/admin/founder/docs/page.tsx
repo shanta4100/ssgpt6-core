@@ -3,11 +3,11 @@
 import { FormEvent, useEffect, useState } from "react";
 
 type FounderDoc = {
-  id: number;
+  id: string;
   title: string;
   category: string;
   content: string;
-  created_at: string;
+  createdAt: string;
 };
 
 export default function FounderDocsPage() {
@@ -22,6 +22,7 @@ export default function FounderDocsPage() {
     try {
       const res = await fetch("/api/founder-docs", { cache: "no-store" });
       const data = await res.json();
+
       if (data?.ok) {
         setItems(data.items || []);
       } else {
@@ -149,7 +150,7 @@ export default function FounderDocsPage() {
                     {item.content}
                   </p>
                   <p style={{ margin: 0, color: "#9cc9ff", fontSize: "12px" }}>
-                    {item.created_at}
+                    {item.createdAt}
                   </p>
                 </div>
               ))}
