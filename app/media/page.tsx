@@ -1,4 +1,45 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+
 export default function MediaPage() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setMessage("");
+
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setMessage(data.message || "Subscription failed.");
+        setLoading(false);
+        return;
+      }
+
+      setMessage(data.message || "Subscribed successfully.");
+      setName("");
+      setEmail("");
+    } catch {
+      setMessage("Network error. Please try again.");
+    }
+
+    setLoading(false);
+  }
+
   return (
     <main className="ssgpt6-media-page">
       <div className="media-container">
@@ -30,7 +71,7 @@ export default function MediaPage() {
         <section className="media-section">
           <h2>Audio and Podcast</h2>
           <p className="media-text">
-            This audio block works with direct MP3 files. Replace the sample file path with your real audio file.
+            Put your real MP3 file inside <strong>public/audio/</strong> and update the filename below.
           </p>
 
           <div className="media-card">
@@ -46,17 +87,35 @@ export default function MediaPage() {
         <section className="media-section">
           <h2>Newsletter</h2>
           <p className="media-text">
-            This is a working front-end newsletter form layout. For real signup delivery, connect it later to your email service.
+            Use this newsletter form to collect name and email through your website.
           </p>
 
-          <form className="media-newsletter-form">
+          <form className="media-newsletter-form" onSubmit={handleSubmit}>
             <label htmlFor="newsletter-name">Full Name</label>
-            <input id="newsletter-name" name="name" type="text" placeholder="Your name" />
+            <input
+              id="newsletter-name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
 
             <label htmlFor="newsletter-email">Email Address</label>
-            <input id="newsletter-email" name="email" type="email" placeholder="your@email.com" />
+            <input
+              id="newsletter-email"
+              name="email"
+              type="email"
+              placeholder="your@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
 
-            <button type="submit">Subscribe</button>
+            <button type="submit" disabled={loading}>
+              {loading ? "Submitting..." : "Subscribe"}
+            </button>
+
+            {message ? <p className="newsletter-message">{message}</p> : null}
           </form>
         </section>
 
@@ -85,31 +144,6 @@ export default function MediaPage() {
               <a href="/contact" className="media-btn">
                 Request Access
               </a>
-            </article>
-          </div>
-        </section>
-
-        <section className="media-section">
-          <h2>More Media</h2>
-          <div className="media-grid">
-            <article className="media-card">
-              <h3>Podcast Library</h3>
-              <p>Organized access to recorded audio and platform updates.</p>
-            </article>
-
-            <article className="media-card">
-              <h3>Video Library</h3>
-              <p>Featured video messages, project highlights, and future broadcasts.</p>
-            </article>
-
-            <article className="media-card">
-              <h3>Newsletter Archive</h3>
-              <p>Past releases, updates, announcements, and editorial communication.</p>
-            </article>
-
-            <article className="media-card">
-              <h3>Webinar Archive</h3>
-              <p>Previous webinar sessions and access-based event resources.</p>
             </article>
           </div>
         </section>
