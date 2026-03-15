@@ -129,10 +129,6 @@
   text-align: center;
 }
 
-.payment-methods h3 {
-  margin-bottom: 16px;
-}
-
 .payment-buttons {
   display: flex;
   flex-wrap: wrap;
