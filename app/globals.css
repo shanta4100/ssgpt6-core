@@ -22,9 +22,13 @@
   margin-bottom: 10px;
 }
 
-.ssgpt6-pricing-board h2 {
+.ssgpt6-pricing-board h1 {
   font-size: 40px;
   margin: 0 0 12px;
+}
+
+.ssgpt6-pricing-board h2 {
+  margin: 0 0 16px;
 }
 
 .ssgpt6-pricing-board .subtitle {
@@ -188,7 +192,7 @@
 }
 
 @media (max-width: 640px) {
-  .ssgpt6-pricing-board h2 {
+  .ssgpt6-pricing-board h1 {
     font-size: 30px;
   }
 
