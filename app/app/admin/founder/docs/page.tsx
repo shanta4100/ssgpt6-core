@@ -3,10 +3,11 @@
 import { FormEvent, useEffect, useState } from "react";
 
 type FounderDoc = {
+  id: number;
   title: string;
   category: string;
   content: string;
-  createdAt: string;
+  created_at: string;
 };
 
 export default function FounderDocsPage() {
@@ -19,11 +20,15 @@ export default function FounderDocsPage() {
 
   async function loadItems() {
     try {
-      const res = await fetch("/api/founder-docs");
+      const res = await fetch("/api/founder-docs", { cache: "no-store" });
       const data = await res.json();
-      if (data?.ok) setItems(data.items || []);
+      if (data?.ok) {
+        setItems(data.items || []);
+      } else {
+        setMessage(data.message || "Failed to load documents.");
+      }
     } catch {
-      // ignore
+      setMessage("Network error while loading documents.");
     }
   }
 
@@ -134,8 +139,8 @@ export default function FounderDocsPage() {
             <p style={text}>No saved founder documents yet.</p>
           ) : (
             <div style={{ display: "grid", gap: "14px" }}>
-              {items.map((item, index) => (
-                <div key={`${item.createdAt}-${index}`} style={docCard}>
+              {items.map((item) => (
+                <div key={item.id} style={docCard}>
                   <p style={{ margin: "0 0 8px", fontWeight: 700 }}>{item.title}</p>
                   <p style={{ margin: "0 0 6px", color: "#dbe7ff" }}>
                     <strong>Category:</strong> {item.category}
@@ -144,7 +149,7 @@ export default function FounderDocsPage() {
                     {item.content}
                   </p>
                   <p style={{ margin: 0, color: "#9cc9ff", fontSize: "12px" }}>
-                    {item.createdAt}
+                    {item.created_at}
                   </p>
                 </div>
               ))}
