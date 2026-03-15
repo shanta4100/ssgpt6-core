@@ -14,6 +14,7 @@ export async function POST(req: Request) {
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!emailPattern.test(email)) {
       return NextResponse.json(
         { ok: false, message: "Please enter a valid email address." },
