@@ -1,232 +1,157 @@
-import Footer from "../footer";
-
 export default function ContactPage() {
-  const navLink = {
-    color: "#ffffff",
-    textDecoration: "none",
-    padding: "10px 14px",
-    borderRadius: "12px",
-    fontWeight: 600,
-  } as const;
-
-  const activeNav = {
-    color: "#0b1f3a",
-    textDecoration: "none",
-    padding: "10px 16px",
-    borderRadius: "12px",
-    backgroundColor: "#c9a227",
-    fontWeight: 700,
-  } as const;
-
-  const card = {
-    backgroundColor: "#ffffff",
-    borderRadius: "22px",
-    padding: "26px",
-    boxShadow: "0 12px 30px rgba(11, 31, 58, 0.10)",
-    border: "1px solid #d6e2f2",
-  } as const;
-
-  const button = {
-    display: "inline-block",
-    padding: "12px 18px",
-    borderRadius: "12px",
-    backgroundColor: "#0b1f3a",
-    color: "#ffffff",
-    textDecoration: "none",
-    fontWeight: 700,
-  } as const;
-
   return (
-    <>
-      <main
+    <main
+      style={{
+        minHeight: "100vh",
+        background: "linear-gradient(180deg, #06111f 0%, #0c1c2f 100%)",
+        color: "#ffffff",
+        padding: "48px 20px",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <div
         style={{
-          minHeight: "100vh",
-          background:
-            "linear-gradient(180deg, #081a36 0%, #0b2347 42%, #f4f7fb 42%, #f4f7fb 100%)",
-          fontFamily: "Arial, sans-serif",
+          maxWidth: "900px",
+          margin: "0 auto",
+          background: "rgba(255,255,255,0.06)",
+          border: "1px solid rgba(153,204,255,0.22)",
+          borderRadius: "18px",
+          padding: "32px",
+          boxShadow: "0 0 24px rgba(0,140,255,0.08)",
         }}
       >
-        <section
+        <p
           style={{
-            maxWidth: "1150px",
-            margin: "0 auto",
-            padding: "40px 20px 80px",
+            color: "#9cc9ff",
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            marginBottom: "10px",
           }}
         >
-          <div style={{ color: "#ffffff", paddingBottom: "40px" }}>
-            <div
-              style={{
-                display: "flex",
-                gap: "20px",
-                flexWrap: "wrap",
-                alignItems: "center",
-                justifyContent: "space-between",
-                marginBottom: "30px",
-              }}
-            >
-              <div>
-                <h1 style={{ fontSize: "32px", margin: 0, fontWeight: 800 }}>
-                  SSGPT6 Core
-                </h1>
-                <p
-                  style={{
-                    marginTop: "8px",
-                    marginBottom: 0,
-                    color: "#d9e4f5",
-                    fontSize: "18px",
-                  }}
-                >
-                  Contact & Support
-                </p>
-              </div>
+          SSGPT6-CORE
+        </p>
 
-              <nav
-                style={{
-                  display: "flex",
-                  gap: "10px",
-                  flexWrap: "wrap",
-                  alignItems: "center",
-                }}
-              >
-                <a href="/" style={navLink}>Home</a>
-                <a href="/tools" style={navLink}>Tools</a>
-                <a href="/about" style={navLink}>About</a>
-                <a href="/contact" style={activeNav}>Contact</a>
-                <a href="/media" style={navLink}>Media</a>
-                <a href="/dashboard" style={navLink}>Dashboard</a>
-              </nav>
-            </div>
+        <h1 style={{ marginTop: 0, marginBottom: "12px" }}>Contact Us</h1>
 
-            <h2
-              style={{
-                fontSize: "56px",
-                lineHeight: "1.05",
-                margin: 0,
-                fontWeight: 800,
-                letterSpacing: "-1px",
-              }}
-            >
-              Contact SSGPT6 Core
-            </h2>
+        <p style={{ color: "#dbe7ff", lineHeight: 1.7 }}>
+          Reach the right team through a structured contact and support pathway.
+          Use this page for pricing questions, business inquiries, support
+          requests, billing questions, accessibility help, and enterprise
+          contact.
+        </p>
 
-            <p
-              style={{
-                marginTop: "18px",
-                fontSize: "20px",
-                lineHeight: "1.8",
-                color: "#d9e4f5",
-                maxWidth: "860px",
-              }}
-            >
-              Reach the platform for support, business inquiries, media requests,
-              partnership discussions, and future company coordination under
-              GNAIAAAC LLC.
+        <div
+          style={{
+            marginTop: "28px",
+            display: "grid",
+            gap: "16px",
+          }}
+        >
+          <div
+            style={{
+              background: "rgba(255,255,255,0.05)",
+              borderRadius: "14px",
+              padding: "18px",
+            }}
+          >
+            <h3 style={{ marginTop: 0 }}>General Inquiry</h3>
+            <p style={{ marginBottom: 0 }}>
+              Questions about the platform, pricing, services, and public
+              information.
             </p>
           </div>
 
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "20px",
+              background: "rgba(255,255,255,0.05)",
+              borderRadius: "14px",
+              padding: "18px",
             }}
           >
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Support
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                For platform questions, page issues, media access, or general
-                support inquiries.
-              </p>
-              <p
-                style={{
-                  color: "#0b1f3a",
-                  fontWeight: 700,
-                  marginBottom: 0,
-                }}
-              >
-                ssgpt6@aol.com
-              </p>
-            </div>
-
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Business
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                For partnership opportunities, company communication, and business
-                collaboration requests.
-              </p>
-              <p
-                style={{
-                  color: "#0b1f3a",
-                  fontWeight: 700,
-                  marginBottom: 0,
-                }}
-              >
-                GNAIAAAC LLC
-              </p>
-            </div>
-
-            <div style={card}>
-              <h3 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "28px" }}>
-                Founder
-              </h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Founder-led project direction, long-term vision, and executive
-                oversight for the SSGPT6 Core platform.
-              </p>
-              <p
-                style={{
-                  color: "#0b1f3a",
-                  fontWeight: 700,
-                  marginBottom: 0,
-                }}
-              >
-                Arifur Rahman Shanta
-              </p>
-            </div>
-          </div>
-
-          <div style={{ ...card, marginTop: "24px" }}>
-            <h3
-              style={{
-                marginTop: 0,
-                marginBottom: "14px",
-                color: "#0b1f3a",
-                fontSize: "30px",
-              }}
-            >
-              Contact Summary
-            </h3>
-
-            <p
-              style={{
-                color: "#4b5563",
-                fontSize: "17px",
-                lineHeight: "1.8",
-                marginBottom: "18px",
-              }}
-            >
-              This page serves as the public contact layer for SSGPT6 Core. It can
-              later grow into a full support center with forms, ticketing, admin
-              routing, partner contact paths, and client-specific communication
-              workflows.
+            <h3 style={{ marginTop: 0 }}>Billing and Refund Support</h3>
+            <p style={{ marginBottom: 0 }}>
+              Questions about payment, invoice review, refund requests, or
+              pricing clarification.
             </p>
-
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <a href="/media" style={button}>
-                Open Media Hub
-              </a>
-              <a href="/pricing" style={button}>
-                View Pricing
-              </a>
-            </div>
           </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+
+          <div
+            style={{
+              background: "rgba(255,255,255,0.05)",
+              borderRadius: "14px",
+              padding: "18px",
+            }}
+          >
+            <h3 style={{ marginTop: 0 }}>Enterprise and Business Contact</h3>
+            <p style={{ marginBottom: 0 }}>
+              For custom packages, large-scale support, and business-focused
+              access.
+            </p>
+          </div>
+        </div>
+
+        <div
+          style={{
+            marginTop: "28px",
+            background: "rgba(255,255,255,0.05)",
+            borderRadius: "14px",
+            padding: "20px",
+          }}
+        >
+          <h2 style={{ marginTop: 0 }}>Contact Details</h2>
+          <p>
+            <strong>Organization:</strong> GNAIAAAC LLC
+          </p>
+          <p>
+            <strong>Platform:</strong> Powered by SSGPT6-CORE
+          </p>
+          <p>
+            <strong>Email:</strong> [Insert Official Email]
+          </p>
+          <p>
+            <strong>Website:</strong> [Insert Website URL]
+          </p>
+        </div>
+
+        <div
+          style={{
+            marginTop: "28px",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "12px",
+          }}
+        >
+          <a
+            href="/pricing"
+            style={{
+              display: "inline-block",
+              padding: "12px 18px",
+              borderRadius: "999px",
+              background: "linear-gradient(90deg, #1f7fff, #53b3ff)",
+              color: "#ffffff",
+              textDecoration: "none",
+              fontWeight: 700,
+            }}
+          >
+            Back to Pricing
+          </a>
+
+          <a
+            href="/"
+            style={{
+              display: "inline-block",
+              padding: "12px 18px",
+              borderRadius: "999px",
+              background: "rgba(255,255,255,0.08)",
+              color: "#ffffff",
+              textDecoration: "none",
+              border: "1px solid rgba(153,204,255,0.25)",
+            }}
+          >
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </main>
   );
 }
