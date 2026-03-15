@@ -30,7 +30,7 @@ export default function MediaPage() {
       >
         <section
           style={{
-            maxWidth: "1100px",
+            maxWidth: "1120px",
             margin: "0 auto",
             padding: "40px 20px 80px",
           }}
@@ -46,8 +46,8 @@ export default function MediaPage() {
           >
             <h1 style={{ margin: 0, fontSize: "42px" }}>Media Hub</h1>
             <p style={{ marginTop: "12px", lineHeight: "1.8", color: "#d9e4f5" }}>
-              Central access for podcast, blogs, newsletter, webinar, releases, and video
-              publishing inside SSGPT6 Core.
+              Central access for podcast, blogs, newsletter, webinar, company releases,
+              videos, and future media distribution inside SSGPT6 Core.
             </p>
           </div>
 
@@ -59,52 +59,63 @@ export default function MediaPage() {
             }}
           >
             <div style={card}>
-              <h2 style={{ marginTop: 0 }}>Podcast</h2>
+              <h2 style={{ marginTop: 0, color: "#0b1f3a" }}>Podcast</h2>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Audio content, interviews, and voice-based programming.
+                Audio publishing, interviews, founder voice, and future episode distribution.
               </p>
               <a href="/podcast" style={button}>Open Podcast</a>
             </div>
 
             <div style={card}>
-              <h2 style={{ marginTop: 0 }}>Blogs</h2>
+              <h2 style={{ marginTop: 0, color: "#0b1f3a" }}>Blogs</h2>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Articles, editorials, founder notes, and written updates.
+                Articles, editorial posts, media commentary, founder updates, and knowledge publishing.
               </p>
               <a href="/blogs" style={button}>Open Blogs</a>
             </div>
 
             <div style={card}>
-              <h2 style={{ marginTop: 0 }}>Newsletter</h2>
+              <h2 style={{ marginTop: 0, color: "#0b1f3a" }}>Newsletter</h2>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Subscriber updates, digest communication, and regular publishing.
+                Subscriber updates, recurring communication, audience messaging, and digest publishing.
               </p>
               <a href="/newsletter" style={button}>Open Newsletter</a>
             </div>
 
             <div style={card}>
-              <h2 style={{ marginTop: 0 }}>Webinar</h2>
+              <h2 style={{ marginTop: 0, color: "#0b1f3a" }}>Webinar</h2>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Live sessions, event presentations, and educational broadcasts.
+                Educational sessions, replay events, live presentations, and future learning broadcasts.
               </p>
               <a href="/webinar" style={button}>Open Webinar</a>
             </div>
 
             <div style={card}>
-              <h2 style={{ marginTop: 0 }}>Company Releases</h2>
+              <h2 style={{ marginTop: 0, color: "#0b1f3a" }}>Company Releases</h2>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Official statements, launch notes, and structured company announcements.
+                Official announcements, milestone updates, launch notes, and structured public statements.
               </p>
               <a href="/releases" style={button}>Open Releases</a>
             </div>
 
             <div style={card}>
-              <h2 style={{ marginTop: 0 }}>Video Library</h2>
+              <h2 style={{ marginTop: 0, color: "#0b1f3a" }}>Video Library</h2>
               <p style={{ color: "#4b5563", lineHeight: "1.8" }}>
-                Featured videos, brand content, and future automated production outputs.
+                Featured videos, platform media, brand content, and future automated productions.
               </p>
               <a href="/videos" style={button}>Open Videos</a>
             </div>
+          </div>
+
+          <div style={{ ...card, marginTop: "24px" }}>
+            <h2 style={{ marginTop: 0, color: "#0b1f3a", fontSize: "30px" }}>
+              Media note
+            </h2>
+            <p style={{ color: "#4b5563", lineHeight: "1.8", marginBottom: 0 }}>
+              This page works as the central directory for SSGPT6 Core media. Later,
+              it can connect to real uploads, embedded players, subscriber features,
+              analytics, admin publishing controls, and external media connectors.
+            </p>
           </div>
         </section>
       </main>
