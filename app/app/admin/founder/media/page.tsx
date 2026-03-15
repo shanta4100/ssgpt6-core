@@ -36,9 +36,8 @@ export default function FounderMediaPage() {
           </h1>
 
           <p style={{ margin: 0, color: "#dbe7ff", lineHeight: 1.7 }}>
-            Private founder media area for podcast planning, video links,
-            webinar records, newsletter drafts, media notes, and future upload
-            workflows.
+            Private founder media review page for podcast, blogs, webinar, media,
+            video, video creators, newsletter, and pricing-related checks.
           </p>
         </section>
 
@@ -50,93 +49,43 @@ export default function FounderMediaPage() {
             marginBottom: "24px",
           }}
         >
-          <div style={card}>
-            <h2 style={cardTitle}>Video Records</h2>
-            <p style={cardText}>
-              Store featured video links, launch content, and founder video references.
-            </p>
-          </div>
-
-          <div style={card}>
-            <h2 style={cardTitle}>Podcast Records</h2>
-            <p style={cardText}>
-              Track podcast episodes, audio notes, and publishing plans.
-            </p>
-          </div>
-
-          <div style={card}>
-            <h2 style={cardTitle}>Webinar Records</h2>
-            <p style={cardText}>
-              Manage webinar topics, session notes, and private event planning.
-            </p>
-          </div>
-
-          <div style={card}>
-            <h2 style={cardTitle}>Newsletter Archive</h2>
-            <p style={cardText}>
-              Keep newsletter drafts, subject lines, and founder releases together.
-            </p>
-          </div>
+          {[
+            "Podcast",
+            "Blogs",
+            "Webinar",
+            "Media",
+            "Video",
+            "Video Creators",
+            "Newsletter",
+            "Pricing",
+          ].map((item) => (
+            <div
+              key={item}
+              style={{
+                padding: "22px",
+                borderRadius: "18px",
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(140,190,255,0.20)",
+              }}
+            >
+              <h2 style={{ marginTop: 0, marginBottom: "10px", fontSize: "22px" }}>
+                {item}
+              </h2>
+              <p style={{ margin: 0, color: "#dbe7ff", lineHeight: 1.7 }}>
+                Founder review area for {item.toLowerCase()} planning, records, checks, and future cloud save workflows.
+              </p>
+            </div>
+          ))}
         </section>
 
-        <section
-          style={{
-            padding: "24px",
-            borderRadius: "18px",
-            background: "rgba(255,255,255,0.05)",
-            border: "1px solid rgba(140,190,255,0.20)",
-            marginBottom: "24px",
-          }}
-        >
-          <h2 style={{ marginTop: 0 }}>Media Direction</h2>
-          <p style={{ color: "#dbe7ff", lineHeight: 1.8 }}>
-            This page is the founder-only media control space. Later this can
-            connect to permanent cloud save, file upload, video archive,
-            podcast records, webinar access, newsletter storage, and AI media
-            reminders.
-          </p>
-        </section>
-
-        <section
-          style={{
-            display: "flex",
-            gap: "12px",
-            flexWrap: "wrap",
-          }}
-        >
-          <a href="/admin/founder" style={primaryBtn}>
-            Back to Founder Page
-          </a>
-          <a href="/media" style={secondaryBtn}>
-            Public Media Page
-          </a>
-          <a href="/admin" style={secondaryBtn}>
-            Back to Admin
-          </a>
+        <section style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+          <a href="/admin/founder" style={primaryBtn}>Back to Founder Page</a>
+          <a href="/media" style={secondaryBtn}>Public Media Page</a>
         </section>
       </div>
     </main>
   );
 }
-
-const card: React.CSSProperties = {
-  padding: "22px",
-  borderRadius: "18px",
-  background: "rgba(255,255,255,0.05)",
-  border: "1px solid rgba(140,190,255,0.20)",
-};
-
-const cardTitle: React.CSSProperties = {
-  marginTop: 0,
-  marginBottom: "10px",
-  fontSize: "22px",
-};
-
-const cardText: React.CSSProperties = {
-  margin: 0,
-  color: "#dbe7ff",
-  lineHeight: 1.7,
-};
 
 const primaryBtn: React.CSSProperties = {
   display: "inline-block",
